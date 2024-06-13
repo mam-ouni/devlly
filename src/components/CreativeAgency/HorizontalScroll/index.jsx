@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect , useState } from 'react';
 //= Components
 import Intro from './Intro';
 import Awards from './Awards';
 import CallToAction from './CallToAction';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 function HzScroll({ lightMode }) {
   useEffect(() => {
+    setTimeout(()=> {
     if (window.innerWidth > 991) {
       gsap.registerPlugin(ScrollTrigger);
       let sections = gsap.utils.toArray(".panel");
@@ -20,7 +23,7 @@ function HzScroll({ lightMode }) {
         }
       });
     }
-
+    },200);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);

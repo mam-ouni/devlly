@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 //= Data
 import data from '@/data/app-data.json';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
 
 function Footer({ lightMode }) {
   useEffect(() => {
@@ -8,18 +11,21 @@ function Footer({ lightMode }) {
       gsap.set('.footer-container', { yPercent: -50 })
       const uncover = gsap.timeline({ paused: true })
       uncover.to('.footer-container', { yPercent: 0, ease: 'none' });
-      ScrollTrigger.create({
-        trigger: 'main',
-        start: 'bottom bottom',
-        end: '+=50%',
-        animation: uncover,
-        scrub: true,
-      });
+      setTimeout(()=> {
+        ScrollTrigger.create({
+          trigger: 'main',
+          start: 'bottom bottom',
+          end: '+=50%',
+          animation: uncover,
+          scrub: true,
+        })}
+        ,200);
+      
     }
   }, []);
 
   return (
-    <footer>
+    <footer style={{marginTop : "4vh"}}>
       <div className="footer-container">
         <div className="container pb-80 pt-80 ontop">
           <div className="row">
