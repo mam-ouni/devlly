@@ -1,0 +1,65 @@
+{
+    "navbar":   {
+        "home" : {
+            "home" : "Accueil" ,
+            "Home Dark" : {
+                "Home Dark" : "Accueil Sombre",
+                "Main Home" : "Accueil Principal" ,
+                "Corporate Business" : "Entreprise Corporative" ,
+                "Home One page" : "Accueil One page" , 
+                "Digital Agency" : "Agence Digitale" , 
+                "Freelancer" : "Freelance" , 
+                "Marketing Agency" : "Agence de Marketing" , 
+                "Creative Agency" : "Agence Créative" , 
+                "Startup Bussines" : "Entreprise Startup", 
+                "Architecture" : "Architecture"
+                
+            },
+            "Home Light" : {
+                "Home Light" : "Accueil Clair",
+                "Main Home" : "Accueil Principal" ,
+                "Corporate Business" : "Entreprise Corporative" ,
+                "Home One page" : "Accueil One page" , 
+                "Digital Agency" : "Agence Digitale" , 
+                "Freelancer" : "Freelance" , 
+                "Marketing Agency" : "Agence de Marketing" , 
+                "Creative Agency" : "Agence Créative" , 
+                "Startup Bussines" : "Entreprise Startup", 
+                "Architecture" : "Architecture"
+                
+            },
+            "Showcases" :{
+                "Showcases" : "Présentations" ,
+                "Parallax Slider" : "Curseur Parallaxe" ,
+                "Frame Slider" : "Curseur à Cadre" ,
+                "Circle Slider" : "Curseur Circulaire" ,
+                "Showcase Carousel" : "Carrousel de Présentation" ,
+                "Interactive Links1" : "Liens Interactifs1" ,
+                "Interactive Links2" : "Liens Interactifs2" ,
+                "Vertical Parallax" : "Parallaxe Vertical"
+            },
+            "Showcases Light" : {
+                "Showcases Light" : "Présentations Claires" ,
+                "Parallax Slider" : "Curseur Parallaxe" ,
+                "Showcase Carousel" : "Carrousel de Présentation" ,
+                "Frame Slider" : "Curseur à Cadre" ,
+                "Circle Slider" : "Curseur Circulaire" ,
+                "Interactive Links1" : "Liens Interactifs1" ,
+                "Interactive Links2" : "Liens Interactifs2" ,
+                "Vertical Parallax" : "Parallaxe Vertical" 
+            }
+
+        } ,
+        "pages" : {
+            "pages" : "Pages" ,
+            "About" : "À Propos" ,
+            "Services" : "Services" ,
+            "Our Team" : "Notre Équipe" ,
+            "Contact Us" : "Contactez-nous" 
+        },
+        "portfolio" : "PORTFOLIO" ,
+        "blogs" : "BLOGS" , 
+        "shop"  : "BOUTIQUE" ,
+        "contact" : "CONTACT"
+    }
+}

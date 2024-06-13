@@ -1,0 +1,65 @@
+{
+    "navbar":   {
+        "home" : {
+            "home" : "Home" ,
+            "Home Dark" : {
+                "Home Dark" : "Home Dark",
+                "Main Home" : "Main Home" ,
+                "Corporate Business" : "Corporate Business" ,
+                "Home One page" : "Home One page" , 
+                "Digital Agency" : "Digital Agency" , 
+                "Freelancer" : "Freelancer" , 
+                "Marketing Agency" : "Marketing Agency" , 
+                "Creative Agency" : "Creative Agency" , 
+                "Startup Bussines" : "Startup Bussines", 
+                "Architecture" : "Architecture"
+                
+            },
+            "Home Light" : {
+                "Home Light" : "Home Light",
+                "Main Home" : "Main Home" ,
+                "Corporate Business" : "Corporate Business" ,
+                "Home One page" : "Home One page" , 
+                "Digital Agency" : "Digital Agency" , 
+                "Freelancer" : "Freelancer" , 
+                "Marketing Agency" : "Marketing Agency" , 
+                "Creative Agency" : "Creative Agency" , 
+                "Startup Bussines" : "Startup Bussines", 
+                "Architecture" : "Architecture"
+                
+            },
+            "Showcases" :{
+                "Showcases" : "Showcases" ,
+                "Parallax Slider" : "Parallax Slider" ,
+                "Frame Slider" : "Frame Slider" ,
+                "Circle Slider" : "Circle Slider" ,
+                "Showcase Carousel" : "Showcase Carousel" ,
+                "Interactive Links1" : "Interactive Links1" ,
+                "Interactive Links2" : "Interactive Links2" ,
+                "Vertical Parallax" : "Vertical Parallax" 
+            },
+            "Showcases Light" : {
+                "Showcases Light" :"Showcases Light" ,
+                "Parallax Slider" : "Parallax Slider" ,
+                "Showcase Carousel" : "Showcase Carousel" ,
+                "Frame Slider" : "Frame Slider" ,
+                "Circle Slider" : "Circle Slider" ,
+                "Interactive Links1" : "Interactive Links1" ,
+                "Interactive Links2" : "Interactive Links2" ,
+                "Vertical Parallax" : "Vertical Parallax" 
+            }
+
+        } ,
+        "pages" : {
+            "pages" : "Pages" ,
+            "About" : "About" ,
+            "Services" : "Services" ,
+            "Our Team" : "Our Team" ,
+            "Contact Us" : "Contact Us" 
+        },
+        "portfolio" : "PORTFOLIO" ,
+        "blogs" : "BLOGS" , 
+        "shop"  : "SHOP" ,
+        "contact" : "CONTACT"
+    }
+}
