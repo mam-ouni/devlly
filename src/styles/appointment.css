@@ -1,0 +1,73 @@
+/* appointment */
+.appointment :where(input,select,textarea){
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    padding: 12px 0px;
+}
+.appointment :where(input,select,textarea):hover{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.appointment .form ,.screen{
+    width: 50%;
+}
+.appointment .screen{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.appointment .form .last > div,.appointment .form .last textarea {
+    width: 50% !important;
+}
+
+/* my alert */
+.my_alert{
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    
+}
+.my_alert > div{
+    position: relative;
+}
+
+.my_alert div:nth-child(2){
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+}
+.form_container{
+    height: 450px;
+}
+.Login_form{
+    width: 40%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+.Login_form input{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    padding: 12px 0px;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+}
+.Login_form input:hover{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+/* responsive */
+@media screen and (max-width : 576px) {
+    .appointment .form .last > div,.appointment .form .last textarea{
+        width: 100% !important;
+    }
+    .my_alert{
+        width: 100%;
+    }
+}
+@media screen and (max-width : 992px) {
+    .appointment .form{
+        width: 100% !important;
+    }
+     .screen{
+        width: 100% !important;
+    }
+}

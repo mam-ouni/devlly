@@ -211,6 +211,9 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
               <Link className="nav-link" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}><span className="rolling-text">Contact</span></Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" href={`/appointment`}><span className="rolling-text">Appointment</span></Link>
+            </li>
+            <li className="nav-item">
               <select  href={`/${lightMode ? 'light' : 'dark'}/page-contact`}
                 onChange={handleLangueChange}
                 defaultValue={"en"}
@@ -219,6 +222,7 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
                 <option className="rolling-text" value={"fr"} >FR</option>
               </select>
             </li>
+            
           </ul>
         </div>
 

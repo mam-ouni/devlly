@@ -6,9 +6,12 @@ import Head from "next/head";
 import '@/styles/modal-video.css';
 import "swiper/css/bundle";
 import '@/styles/globals.css';
+import "@/styles/appointment.css"
+import "@/styles/dashboard.css"
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
+import { SessionProvider } from "next-auth/react";
 
   i18next.use(initReactI18next)
   .use(Backend)
@@ -20,7 +23,7 @@ import Backend from "i18next-http-backend";
     fallbacking :'en'
   })
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps ,session}) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return getLayout(
@@ -29,8 +32,9 @@ function App({ Component, pageProps }) {
         <title>Geekfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </Head>
-
-      <Component {...pageProps} />
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
 
       <Script strategy="beforeInteractive" src="/assets/js/plugins.js"></Script>
       <Script strategy="beforeInteractive" src="/assets/js/TweenMax.min.js"></Script>
