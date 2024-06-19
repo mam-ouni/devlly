@@ -202,7 +202,9 @@ export default function Table() {
             <Box className = 'table_modal text-dark'>
                  <div className='d-flex align-items-center justify-content-between'>
                     <h6>Appointment {appointment_modal.id_appointment}</h6>
-                    <Close color={'black'} width={20} height={20}/>
+                    <button className='btn' onClick={()=>setOpen(false)}>
+                        <Close color={'black'} width={20} height={20}/>
+                    </button>
                  </div>
                  <div className='d-flex flex-column'>
                     

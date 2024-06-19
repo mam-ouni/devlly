@@ -17,6 +17,8 @@
     "gsap": "^3.12.5",
     "i18next": "^23.11.5",
     "i18next-http-backend": "^2.5.2",
+    "lord-icon-element": "^4.1.2",
+    "lottie-web": "^5.12.2",
     "mysql2": "^3.10.0",
     "next": "14.2.4",
     "next-auth": "^4.24.7",

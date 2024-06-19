@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head';
 //= Layout
 import Layout from '@/layouts/default';
@@ -12,6 +12,10 @@ import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 export default function index() {
     const {data: session,status} = useSession()
+    const [list,setList] = useState('appointment')
+    const handleList = (param) => {
+        setList(param)
+    }
     const router = useRouter()
     useEffect(()=>{
        if(status === 'loading') return
@@ -53,8 +57,8 @@ export default function index() {
         </Head>
         <Loader />
         <main className='d-flex' style={{backgroundColor : 'rgb(17,17,17)'}}>
-            <Two/>
-            <One/>
+            <Two list = {list} handleList = {handleList}/>
+            <One list = {list} handleList={handleList}/>
         </main>
      </>
   )
