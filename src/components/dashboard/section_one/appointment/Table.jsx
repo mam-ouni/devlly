@@ -12,7 +12,12 @@ export default function Table() {
   const [value,setValue] = useState(5)
   const [page,setPage] = useState(1)
   const [appointmentToDisplay,setAppointmentToDisplay] = useState([])
+  const [change,setChange] = useState({
+    value : false,
+    type: ''
+  })
   const [search,setSearch] = useState('')
+
   const handleChangePage = (event, value) => {
     setPage(value);
   }
@@ -67,6 +72,7 @@ export default function Table() {
         console.log(res);
         GET()
         sendMail(item,type)
+        setChange({value : false,type : ''})
         setOpen(false)
      }).catch(err => {
         console.log(err);
@@ -80,7 +86,7 @@ export default function Table() {
         
     }
   }
-  
+  /* useEffect part */ 
   useEffect(()=>{
     GET()
   },[])
@@ -216,7 +222,7 @@ export default function Table() {
             </div>
         </div> 
         <Modal onClose={()=>setOpen(false)} open = {open}>
-            <Box className = 'table_modal text-dark'>
+            <Box className = 'table_modal text-light border'>
                  <div className='d-flex align-items-center justify-content-between'>
                     <h6>Appointment {appointment_modal.id_appointment}</h6>
                     <button className='btn' onClick={()=>setOpen(false)}>
@@ -231,26 +237,34 @@ export default function Table() {
                         <p>Type of meeting : {appointment_modal.typeM}</p>
                         <p>Subject : {appointment_modal.subject}</p>
                         <p>Date : {formatDate(appointment_modal.date)} at {appointment_modal.time}</p>
+                        <p>Status : <b className='px-2 py-1 rounded border' style={{color : appointment_modal.status === 'confirmed' ? 'green' : appointment_modal.status === 'waiting' ? 'orange' : 'red'}}>{appointment_modal.status}</b></p>
                         <div>
                             <h6>Message : </h6>
-                            <p  style={{marginBottom : '0px',maxHeight : '100px',overflowY : 'auto',width : '100%',wordWrap : 'break-word'}} className='rounded border px-2 py-1'>
-                                {appointment_modal.msg}
+                            <p  style={{marginBottom : '0px',maxHeight : '100px',overflowY : 'auto',width : '100%',wordWrap : 'break-word' , color : appointment_modal.msg === '' && 'red' ,fontSize :appointment_modal.msg === '' && '12px'}} className='rounded border px-2 py-1'>
+                                {appointment_modal.msg !== '' ? appointment_modal.msg : 'Empty message'}
                             </p>
                         </div>
                  </div>
                  <div className='d-flex gap-4 justify-content-center mt-3'>
-                    {
-                        (appointment_modal.status === 'cancelled' || appointment_modal.status === 'confirmed') && <button onClick={()=>handleChange(appointment_modal.id_appointment,'delete')} className='d-flex align-items-center justify-content-center btn border rounded gap-1'><Delete color={'black'} width={20} height={20}/>Delete</button>
-                    }
-                    {
-                        appointment_modal.status === 'waiting' && (
-                        <>
-                            <button onClick={()=>handleChange(appointment_modal,'cancel')} className='btn btn-danger'>Cancel</button>
-                            <button onClick={()=>handleChange(appointment_modal,'confirm')} className='btn text-light' style={{backgroundColor : colors.blue}}>Confirm</button> 
-                        </>
-                    )
-                    }
-                    
+                 {
+                        !change.value ? (
+                            (appointment_modal.status === 'cancelled' || appointment_modal.status === 'confirmed') ? (
+                                <button onClick={() => setChange({ value: true, type: 'delete' })} className='d-flex align-items-center justify-content-center btn btn-danger text-light  border rounded gap-1'>
+                                    <Delete color={'white'} width={20} height={20} />Delete
+                                </button>
+                            ) : (
+                                <>
+                                    <button onClick={() => setChange({ value: true, type: 'cancel' })} className='btn btn-danger'>Refuse</button>
+                                    <button onClick={() => setChange({ value: true, type: 'confirm' })} className='btn text-light' style={{ backgroundColor: colors.blue }}>Accept</button>
+                                </>
+                            )
+                        ) : (
+                            <>
+                                <button onClick={() => setChange({ value: false, type: '' })} className='btn btn-danger fw-bold' style={{ fontSize: '13px' }}>Cancel</button>
+                                <button onClick={() => handleChange(appointment_modal, change.type)} className='btn text-light fw-bold' style={{ backgroundColor: colors.blue, fontSize: '13px' }}>Confirm</button>
+                            </>
+                        )
+                } 
                  </div>
             </Box>
         </Modal>

@@ -162,7 +162,7 @@
 .table_modal{
     width: 500px;
     height: auto;
-    background-color: white;
+    background-color: rgb(17, 17, 17);
     position: absolute;
     left: 50%;
     top:50%;
