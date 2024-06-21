@@ -56,7 +56,7 @@ export default function Table() {
      axios({
         url : 'http://localhost:3000/api/sendEmail',
         method : 'post',
-        data : {type,gmail : item.email,date : formatDate(item.date) , time : item.time},
+        data : {type,gmail : item.email,date : formatDate(item.date) , time : item.time,name : item.name},
         withCredentials : true,
         responseType :'json'
      }).then((res)=>{
