@@ -40,16 +40,33 @@ export default function Table() {
      setAppointment_modal(item)
      setOpen(true)
   }
-  const handleChange = (id,type)=>{ 
+  const sendMail = (item,type) => {
+     console.log(item);
+     console.log(type);
+     axios({
+        url : 'http://localhost:3000/api/sendEmail',
+        method : 'post',
+        data : {type,gmail : item.email,date : formatDate(item.date) , time : item.time},
+        withCredentials : true,
+        responseType :'json'
+     }).then((res)=>{
+        console.log(res);
+     }).catch(err => {
+        console.log(err);
+     })
+  }
+  const handleChange = (item,type)=>{ 
+    console.log(item);
     axios({
         url : 'http://localhost:3000/api/updateAppointment',
         method : 'post',
-        data : {id,status : type},
+        data : {id : item.id_appointment,status : type},
         withCredentials : true,
         responseType : 'json'
      }).then(res => {
         console.log(res);
         GET()
+        sendMail(item,type)
         setOpen(false)
      }).catch(err => {
         console.log(err);
@@ -228,8 +245,8 @@ export default function Table() {
                     {
                         appointment_modal.status === 'waiting' && (
                         <>
-                            <button onClick={()=>handleChange(appointment_modal.id_appointment,'cancel')} className='btn btn-danger'>Cancel</button>
-                            <button onClick={()=>handleChange(appointment_modal.id_appointment,'confirm')} className='btn text-light' style={{backgroundColor : colors.blue}}>Confirm</button> 
+                            <button onClick={()=>handleChange(appointment_modal,'cancel')} className='btn btn-danger'>Cancel</button>
+                            <button onClick={()=>handleChange(appointment_modal,'confirm')} className='btn text-light' style={{backgroundColor : colors.blue}}>Confirm</button> 
                         </>
                     )
                     }
