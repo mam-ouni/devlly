@@ -3,7 +3,7 @@ import { colors } from '@/styles/colors'
 import React, { useEffect, useState } from 'react'
 import Page from './CustomPagination'
 import axios from 'axios'
-import { Modal ,Box} from '@mui/material'
+import { Modal ,Box,Alert} from '@mui/material'
 export default function Table() {
   const [appointment,setAppointment] = useState([])
   const [open,setOpen] = useState(false)
@@ -17,7 +17,11 @@ export default function Table() {
     type: ''
   })
   const [search,setSearch] = useState('')
-
+  const [alert,setAlert] = useState({
+    open : false,
+    msg : '',
+    severity : '',
+  })
   const handleChangePage = (event, value) => {
     setPage(value);
   }
@@ -74,8 +78,32 @@ export default function Table() {
         sendMail(item,type)
         setChange({value : false,type : ''})
         setOpen(false)
+        setAlert({
+            open : true,
+            msg : `Appointment ${type === 'cancel' ? 'cancelled': type === 'confirm' ? "confirmed" : 'deleted'} successfully`,
+            severity : 'success'
+        })
+        setTimeout(() => {
+            setAlert(prev => ({
+                ...prev,
+                open : false
+            }))
+        }, 4000);
      }).catch(err => {
         console.log(err);
+        setChange({value : false,type : ''})
+        setOpen(false)
+        setAlert({
+            open : true,
+            msg : `Operation failed : ${err.message}`,
+            severity : 'error'
+        })
+        setTimeout(() => {
+            setAlert(prev => ({
+                ...prev,
+                open : false
+            }))
+        }, 4000);
      })
 
      
@@ -190,7 +218,7 @@ export default function Table() {
                             <Clock color={'orange'} width={15} height={15}/>
                         ) : (
                             appointmentItem.status === 'confirmed' ? (
-                            <Success color={'green'} width={15} height={15}/>
+                            <Success color={'green'} width={20} height={20}/>
                             ) : (
                             <Cros color={'red'} width={15} height={15}/>
                             )
@@ -268,6 +296,13 @@ export default function Table() {
                  </div>
             </Box>
         </Modal>
+        {
+            alert.open && (
+                <Alert variant="filled" severity={alert.severity} className='alert'>
+                    {alert.msg}
+                </Alert>
+            )
+        }
     </section>
   )
 }

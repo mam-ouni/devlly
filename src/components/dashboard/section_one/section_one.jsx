@@ -46,7 +46,7 @@ export default function One({list,handleList}) {
     }
   }, [counts.count]);
   return (
-    <section className='dashboardone' style={{ height: '100vh', overflowY: 'auto' }}>
+    <section className='dashboardone' style={{ height: '100vh', overflowY: 'auto' ,position:'relative'}}>
         {
             list === 'appointment' ? (
                 <>

@@ -198,7 +198,14 @@
     background-color: rgb(31,31,31);
     cursor: pointer;
 }
-
+/* alert */ 
+.alert {
+    position : fixed;
+    top: 10%;
+    left: 60%;
+    transform : translate(-50%,-50%);
+    z-index: 2;
+}
 /* responsive */
 @media screen and (max-width: 576px){
     .dashboardone .cons .con{
@@ -209,7 +216,11 @@
         height: 100%;
         border-radius: 0px;
     }
+    .alert{
+        width: 80%;
+    }
 }
+
 @media screen and (max-width: 992px){
     .dashboardone .cons .con{
         width: 50%;
@@ -224,5 +235,8 @@
     }
     .table_container{
         padding: 0px 1.5rem;
+    }
+    .alert{
+        left: 50%;
     }
 }
