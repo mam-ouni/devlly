@@ -8,10 +8,11 @@ export default function Table() {
   const [appointment,setAppointment] = useState([])
   const [open,setOpen] = useState(false)
   const [appointment_modal,setAppointment_modal] = useState({})
+  const [appointmentToDisplay,setAppointmentToDisplay] = useState([])
+  const [searchTable,setSearchTable] = useState([])
   const [count,setCount] = useState(0)
   const [value,setValue] = useState(5)
   const [page,setPage] = useState(1)
-  const [appointmentToDisplay,setAppointmentToDisplay] = useState([])
   const [change,setChange] = useState({
     value : false,
     type: ''
@@ -109,29 +110,47 @@ export default function Table() {
      
   }
   /* get search appointment */ 
-  const handleSearch = ()=>{
-    if(searchValue !== ''){
-        
-    }
-  }
+  const handleSearch = () => {
+
+    const filteredAppointments = appointment.filter(app => 
+        app.name.toLowerCase().includes(search.toLowerCase()) || 
+        app.email.toLowerCase().includes(search.toLowerCase())
+    );  
+    setSearchTable(filteredAppointments);
+    console.log(filteredAppointments); // Log the filtered results
+};
+
   /* useEffect part */ 
   useEffect(()=>{
     GET()
   },[])
   useEffect(()=>{
-    console.log(page,Number(value));
-    setAppointmentToDisplay(appointment.slice((page - 1) * Number(value), ((page - 1) * Number(value)) + Number(value)))
-  },[value,page,appointment])
+    if(searchTable.length === 0){
+        setAppointmentToDisplay(appointment.slice((page - 1) * Number(value), ((page - 1) * Number(value)) + Number(value)))
+    }else{
+        setAppointmentToDisplay(searchTable.slice((page - 1) * Number(value), ((page - 1) * Number(value)) + Number(value)))
+    }
+  },[value,page,appointment,searchTable])
   useEffect(()=>{
-     setCount(Math.ceil(appointment.length / value))
-  },[appointment,value])
-  
+     if(searchTable.length === 0){
+        setCount(Math.ceil(appointment.length / value))
+     }else{
+        setCount(Math.ceil(searchTable.length / value))
+     }
+  },[appointment,value,search])
+  useEffect(()=>{
+    if(search !== ''){
+        handleSearch()
+    }else{
+        setSearchTable([])
+    }
+  },[search])
   return (
     <section className='d-flex justify-content-center mt-4'>
         <div className='table_container'>
             <div className='table'>
                 <div className='t_init d-flex align-items-center justify-content-between px-4 py-4'>
-                    <h6 className='text-light' style={{marginBottom : '0px'}}>Upcoming Appointment</h6>
+                    <h6 className='text-light d-flex gap-1 align-items-center' style={{marginBottom : '0px'}}>Upcoming Appointment <small>{appointment.length}</small></h6>
                     <div className='search d-flex gap-1 align-items-center px-2 w-25'>
                         <Search width={35} height={35} color={'rgba(255, 255, 255, 0.2)'}/>
                         <input type='search' placeholder='Search appointment' className='text-light w-100' value={search} onChange={(e)=>setSearch(e.target.value)}/>
@@ -159,9 +178,9 @@ export default function Table() {
                         </div>
                     </div>
                     {
-                        appointmentToDisplay.length === 0 ? (
+                        appointmentToDisplay.length === 0 || (search !== '' && searchTable.length === 0) ? (
                             <div className='d-flex justify-content-center align-items-center' style={{height : '375px'}}>
-                              <small className='text-danger'>Any appointment are saved</small>
+                              <small className='text-danger'>Empty list</small>
                             </div>
                     
                         ):(
@@ -235,7 +254,7 @@ export default function Table() {
                             ))
                         )
                     }
-                <div className='tfoot px-3 py-3 d-flex justify-content-between align-items-center'>
+                <div className='tfoot px-3 py-3 d-flex justify-content-between align-items-center' style={{top : appointmentToDisplay.length <= 4 ? '100%' : '0px'}}>
                     <div className='text-light d-flex gap-1 align-items-center' style={{color : colors.gray_con}}>
                         <p style={{fontSize : "13px"}}>Row per page</p>
                         <select name="" id="" className='text-light rounded bg-dark' value={value} onChange={(e)=>setValue(e.target.value)}>
