@@ -116,11 +116,10 @@ export default function Table() {
         app.name.toLowerCase().includes(search.toLowerCase()) || 
         app.email.toLowerCase().includes(search.toLowerCase())
     );  
-    setSearchTable(filteredAppointments);
-    console.log(filteredAppointments); // Log the filtered results
+    setSearchTable(filteredAppointments); // Log the filtered results
 };
 
-  /* useEffect part */ 
+  /* this part for useEffect*/ 
   useEffect(()=>{
     GET()
   },[])
@@ -150,7 +149,7 @@ export default function Table() {
         <div className='table_container'>
             <div className='table'>
                 <div className='t_init d-flex align-items-center justify-content-between px-4 py-4'>
-                    <h6 className='text-light d-flex gap-1 align-items-center' style={{marginBottom : '0px'}}>Upcoming Appointment <small>{appointment.length}</small></h6>
+                    <h6 className='text-light d-flex gap-1 align-items-center' style={{marginBottom : '0px'}}>Upcoming Appointment</h6>
                     <div className='search d-flex gap-1 align-items-center px-2 w-25'>
                         <Search width={35} height={35} color={'rgba(255, 255, 255, 0.2)'}/>
                         <input type='search' placeholder='Search appointment' className='text-light w-100' value={search} onChange={(e)=>setSearch(e.target.value)}/>
