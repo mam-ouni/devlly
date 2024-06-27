@@ -13,22 +13,24 @@ export default function Login() {
         [e.target.name] : e.target.value
     }))
   }
-  const login = (e) => {
-    console.log(values);
-    e.preventDefault()
-    signIn('credentials',{
-        email : values.email,
-        password : values.password,
-        redirect : false,
-    }).then(res => {
-        if(res.status === 200){
-            router.push('/dashboard')
-        }
-    }).catch(err => {
-        console.log(err);
-    })
-    
-  }
+  const login = async (e) => {
+    e.preventDefault();
+  
+    const res = await signIn('credentials', {
+      email: values.email,
+      password: values.password,
+      redirect: false,
+      callbackUrl: '/dashboard',
+    });
+  
+    if (res.error) {
+      // Handle error
+      console.error('Login failed:', res.error);
+    } else {
+      // Redirect to the callback URL on successful login
+      router.push(res.url);
+    }
+  };
   return (
        <form action='' className='Login_form px-3 py-3'>
            <h4>Login</h4>

@@ -14,24 +14,32 @@ export default function One({list,handleList}) {
      per2:0,
      per3:0,
   })
-  const GET = ()=>{
-    axios({
-        url : 'http://localhost:3000/api/statistics',
-        method : 'get',
-        withCredentials : true,
-        responseType : 'json'
-    }).then((res)=>{
-        setCounts(prev => ({
-            ...prev,
-            count : res.data.count,
-            waitingCount : res.data.waitingCount,
-            confirmedCount : res.data.ConfirmedCount,
-            canceledCount : res.data.canceledCount,
-        }));
-    }).catch(err => {
-        console.log(err);
-    })
-  }
+  const GET = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/api/statistics', {
+        method: 'GET',
+        credentials: 'include', // This is equivalent to axios' withCredentials: true
+        cache : 'no-store'
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+  
+      setCounts(prev => ({
+        ...prev,
+        count: data.count,
+        waitingCount: data.waitingCount,
+        confirmedCount: data.ConfirmedCount,
+        canceledCount: data.canceledCount,
+      }));
+    } catch (error) {
+      console.error('Fetch error:', error);
+    }
+  };
+  
   useEffect(()=>{
     GET()
   },[])

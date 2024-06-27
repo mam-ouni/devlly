@@ -15,11 +15,27 @@ export default NextAuth({
       },
       async authorize(credentials, req) {
         try {
-          const res = await axios.post('http://localhost:3000/api/auth/login', {
-            email: credentials.email,
-            password: credentials.password,
+          const res = await fetch('http://localhost:3000/api/auth/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: credentials.email,
+              password: credentials.password,
+            }),
+            cache : 'no-store' 
           });
-          const user = res.data.data[0];
+
+          if (!res.ok) {
+            // Handle HTTP errors
+            console.error('HTTP error', res.status);
+            return null;
+          }
+
+          const data = await res.json();
+          const user = data.data[0];
+
           if (user) {
             return user;
           } else {

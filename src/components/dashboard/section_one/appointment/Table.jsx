@@ -26,19 +26,30 @@ export default function Table() {
   const handleChangePage = (event, value) => {
     setPage(value);
   }
-  const GET = ()=>{
-    axios({
-        url : 'http://localhost:3000/api/getAppointment',
-        method : 'get',
-        withCredentials : true,
-        responseType :'json'
-    }).then((res)=>{
-        setAppointment(res.data[0])
-        setAppointmentToDisplay(res.data[0].slice((page - 1) * value, (page - 1) * value + value))
-    }).catch((err)=>{
-        console.log(err);
-    })
-  }
+  const GET = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/api/getAppointment', {
+        method: 'GET',
+        credentials: 'include', // This is equivalent to axios' withCredentials: true
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        cache :'no-store'
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+  
+      setAppointment(data[0]);
+      setAppointmentToDisplay(data[0].slice((page - 1) * value, (page - 1) * value + value));
+    } catch (err) {
+      console.error('Fetch error:', err);
+    }
+  };
+  
   function formatDate(dateString) {
     const date = new Date(dateString);
     const year = date.getFullYear();

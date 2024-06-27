@@ -1,5 +1,4 @@
 import Connection from "../db";
-
 export default async function login(req,res){
     try {
         const con = await Connection()
