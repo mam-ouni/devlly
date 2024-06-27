@@ -207,5 +207,47 @@
             },
             "button":"Let's Talk"
         }
+    },
+    "appo page":{
+        "header":{
+            "title":"Let's Schedule an Appointment",
+            "paragraph":"Fill in all fields with your specific information to schedule a meeting with the administrator."
+        },
+        "screen":{
+            "title" : "Appointment",
+            "subject":"subject",
+            "email":"Email",
+            "date":"Date",
+            "in":"in",
+            "number":"Number",
+            "type":"Type of meet",
+            "message":"Message",
+            "name":"Name"
+        },
+        "form":{
+            "title":"Form",
+            "input":{
+                "name":"Name",
+                "email":"Email",
+                "subject":"Subject",
+                "option":{
+                    "title":"Select type of meeting",
+                    "one":"Google Meet",
+                    "two":"Phone Call",
+                    "three":"Telegram Conversation"
+                },
+                "date":{
+                    "choice":"Select time of meeting",
+                    "no choice":"All appointment are maked"
+                },
+                "number":"Number",
+                "message":"message"
+            },
+            "button":{
+                "title":"Get Appointment"  ,
+                "ok" :"Confirm",
+                "no" :"Cancel"
+            } 
+        }
     }
 }

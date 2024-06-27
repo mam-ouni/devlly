@@ -1,6 +1,8 @@
 import React, { useState ,useEffect} from 'react'
 import axios from 'axios';
+import { useTranslation } from 'react-i18next'
 export default function Form({values,handleValues,handleValuesOne,handleValuesTwo,handleValuesThree,handleAlert,alert}) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   /* state */
   const [confirm,setConfirm] = useState(false)
   const [today,setToday] = useState('');
@@ -107,19 +109,19 @@ export default function Form({values,handleValues,handleValuesOne,handleValuesTw
   },[values.date])
   return (
     <section className='form w-100 w-lg-50' style={{margin : alert.open ? '1rem 0px' : '3rem 0px'}}>
-       <h6>Form</h6>
+       <h6>{t('appo page.form.title')}</h6>
         <form id='contact-form' action="" className='d-flex flex-column gap-3'>
              <div className='d-flex gap-3 gap-sm-5 flex-wrap flex-sm-nowrap'>
-                  <input style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className='w-sm-50 w-100 px-3 text-light' type="text" name='name' placeholder='Name' value={values.name} onChange={(e=>handleValues(e))}/>
-                  <input style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className='w-sm-50 w-100 px-3 text-light' type="email" name='email' placeholder='Email' value={values.email} onChange={(e=>handleValues(e))}/>
+                  <input style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className='w-sm-50 w-100 px-3 text-light' type="text" name='name' placeholder={t('appo page.form.input.name')} value={values.name} onChange={(e=>handleValues(e))}/>
+                  <input style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className='w-sm-50 w-100 px-3 text-light' type="email" name='email' placeholder={t('appo page.form.input.email')} value={values.email} onChange={(e=>handleValues(e))}/>
             </div>
              <div className='d-flex gap-3 gap-sm-5 flex-wrap flex-sm-nowrap'>
-                  <input style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className=' w-sm-50 w-100 px-3 text-light' type="text" name='subject' placeholder='Subject' value={values.subject} onChange={(e=>handleValues(e))}/>
+                  <input style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className=' w-sm-50 w-100 px-3 text-light' type="text" name='subject' placeholder={t('appo page.form.input.subject')} value={values.subject} onChange={(e=>handleValues(e))}/>
                   <select style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className='w-sm-50 w-100 px-3 text-light' name="type" id="" value={values.type} onChange={(e=>handleValues(e))}>
-                     <option defaultValue="">Select type of meeting</option>
-                     <option className='text-capitalize' value="google meet">google meet</option>
-                     <option className='text-capitalize' value="call number">Call Number</option>
-                     <option className='text-capitalize' value="in telegram">In Telegram</option>
+                     <option defaultValue="">{t('appo page.form.input.option.title')}</option>
+                     <option className='text-capitalize' value="google meet">{t('appo page.form.input.option.one')}</option>
+                     <option className='text-capitalize' value="call number">{t('appo page.form.input.option.two')}</option>
+                     <option className='text-capitalize' value="in telegram">{t('appo page.form.input.option.three')}</option>
                   </select>
             </div>
             <div className='d-flex gap-3 gap-sm-5 flex-wrap flex-sm-nowrap'>
@@ -128,9 +130,9 @@ export default function Form({values,handleValues,handleValuesOne,handleValuesTw
                   values.date !== '' ? (
                     <select style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} className='w-sm-50 w-100 px-3 text-light' name="time" id="" value={values.time} onChange={(e=>handleValues(e))}>
                      {values.options.length !== 0 ?(
-                        <option defaultValue="">Select time of meeting</option>
+                        <option defaultValue="">{t('appo page.form.input.date.choice')}</option>
                      ):(
-                      <option defaultValue="">All appointment are maked</option>
+                      <option defaultValue="">{t('appo page.form.input.date.no choice')}</option>
                      )}
                      {values.options.map((item,index)=>(
                         <option className='text-capitalize' value={item} key={index}>{item}</option>
@@ -138,7 +140,7 @@ export default function Form({values,handleValues,handleValuesOne,handleValuesTw
                   </select>
                   ) : (
                      <div style={{backgroundColor : '#1d1d1d',borderRadius : "10px" ,border : '1px solid rgba(255, 255, 255, 0.2)'}} className='w-sm-50 w-100 px-3 text-light'>
-                        <span style={{marginBottom : '0px' ,color : 'rgba(255, 255, 255, 0.2)',padding : '12px 0px'}}>Select time of meeting</span>
+                        <span style={{marginBottom : '0px' ,color : 'rgba(255, 255, 255, 0.2)',padding : '12px 0px'}}>{t('appo page.form.input.date.choice')}</span>
                      </div>
                   )
                 }
@@ -151,16 +153,16 @@ export default function Form({values,handleValues,handleValuesOne,handleValuesTw
                           id="" 
                           style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}} 
                           className='w-100 px-3 text-light'
-                          placeholder='Number'
+                          placeholder={t('appo page.form.input.number')}
                           value={values.number}
                           onChange={e=>handleValues(e)} />
                          {
                            !confirm ? (
-                             <button className='rounded py-2' onClick={(e)=>handleConfirm(e,true)}>Get Appointment</button>
+                             <button className='rounded py-2' onClick={(e)=>handleConfirm(e,true)}>{t('appo page.form.button.title')}</button>
                            ) : (
                              <div className='d-flex gap-3 flex-wrap flex-sm-nowrap'>
-                               <button className='rounded py-2 w-sm-50 w-100' onClick={(e)=>handleConfirm(e,false)}>Cancel</button>
-                               <button className='rounded py-2 w-sm-50 w-100' onClick={(e)=>send(e)}>Confirm</button>
+                               <button className='rounded py-2 w-sm-50 w-100' onClick={(e)=>handleConfirm(e,false)}>{t('appo page.form.button.no')}</button>
+                               <button className='rounded py-2 w-sm-50 w-100' onClick={(e)=>send(e)}>{t('appo page.form.button.ok')}</button>
                             </div>
                            )
                          }
@@ -168,7 +170,7 @@ export default function Form({values,handleValues,handleValuesOne,handleValuesTw
                   <textarea 
                       name="message" 
                       id="" 
-                      placeholder='Message' 
+                      placeholder={t('appo page.form.input.message')}
                       className='px-3 py-2 text-light' 
                       style={{backgroundColor : '#1d1d1d',borderRadius : "10px"}}
                       value={values.message}

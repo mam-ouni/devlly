@@ -1,7 +1,9 @@
 import React from 'react'
 import { Close } from '../svg'
+import { useTranslation } from 'react-i18next'
 
 export default function Alert({msg,success,title}) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   return (
      <div className='my_alert rounded-top'>
         <div className='px-3 py-1 d-flex justify-content-between text-light align-items-center'>

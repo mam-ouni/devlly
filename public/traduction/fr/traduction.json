@@ -110,7 +110,141 @@
         "hzscroll": {
             "intro": {
                 "titre": "Récompenses",
-                "titre2": "Reconnaissance"
+                "titre2": "Reconnaissance",
+                "paragraph": "Notre domaine de pratique est assez vaste : conception, développement. Les experts qui travaillent dans notre studio de design web savent exactement comment rendre votre projet unique, frais et rentable.",
+                "stat": {
+                    "sous titre1": "Années d'Expérience",
+                    "sous titre2": "Projets Réalisés",
+                    "sous titre3": "Clients Satisfaits",
+                    "sous titre4": "Prix Gagnés"
+                }
+            },
+            "awards": {
+                "button": "RÉALISATIONS",
+                "titre": "Nos Prix",
+                "paragraph": "Nemo enim ipsam voluptatem quia voluptas sit odit aut fugit, sed quia.",
+                "cadre": {
+                    "one": "Années",
+                    "two": "d'Expérience"
+                },
+                "list": {
+                    "one": {
+                        "award": "Nomination de l'Indépendant de l'année",
+                        "by": "Awwwards"
+                    },
+                    "two": {
+                        "award": "Awwwards Site of the Day",
+                        "by": "Awwwards"
+                    },
+                    "three": {
+                        "award": "CSSDA Website of the Day",
+                        "by": "Awwwards"
+                    },
+                    "four": {
+                        "award": "Sydney Design Awards – Silver",
+                        "by": "Awwwards"
+                    }
+                }
+            },
+            "call to action": {
+                "titre": "Appel à l'Action",
+                "titre2": {
+                    "one": "Vous avez un projet en tête ?",
+                    "two": "Commençons à travailler."
+                },
+                "button": "Contactez-nous"
+            }
+        },
+        "footer": {
+            "titres": {
+                "one": "Adresse",
+                "two": "Dites Bonjour",
+                "three": "Réseaux Sociaux",
+                "four": "Newsletter"
+            },
+            "address": "Allemagne — 785 15h Street, Office 478 Berlin, De 81566",
+            "input": "Tapez Votre Email",
+            "copyright": "Geekfolio est fièrement propulsé par ThemesCamp"
+        }
+    },
+    "login page": {
+        "titre": "Connectez-vous pour voir le tableau de bord administrateur",
+        "paragraph": "Veuillez entrer vos identifiants pour accéder aux fonctionnalités administrateur.",
+        "zone": {
+            "titre": "Connexion",
+            "input": {
+                "one": "Email",
+                "two": "Mot de passe"
+            },
+            "button": "Connexion"
+        }
+    },
+    "contact page": {
+        "header": {
+            "titles": {
+                "one": "Nous Contacter",
+                "two": "Rendons",
+                "three": "votre marque brillante !"
+            },
+            "paragraph": "Nous aidons nos clients à réussir en créant des identités de marque, des expériences numériques et des supports imprimés qui communiquent clairement, atteignent les objectifs marketing et sont visuellement attrayants."
+        },
+        "form": {
+            "info": {
+                "titles": {
+                    "one": "Entrer en Contact",
+                    "two": "Entrons en",
+                    "three": "contact avec nous."
+                },
+                "paragraph": "Si vous souhaitez travailler avec nous ou simplement entrer en contact, nous serions ravis de vous entendre !"
+            },
+            "input": {
+                "name": "Nom",
+                "email": "Email",
+                "subject": "Objet",
+                "message": "Message"
+            },
+            "button": "Discutons"
+        }
+    },
+    "appo page": {
+        "header": {
+            "title": "Prenons Rendez-vous",
+            "paragraph": "Remplissez tous les champs avec vos informations spécifiques pour planifier une réunion avec l'administrateur."
+        },
+        "screen": {
+            "title": "Rendez-vous",
+            "subject": "Objet",
+            "email": "Email",
+            "date": "Date",
+            "in": "à",
+            "number": "Numéro",
+            "type": "Type de réunion",
+            "message": "Message",
+            "name": "Nom"
+        },
+        "form": {
+            "title": "Formulaire",
+            "input": {
+                "name": "Nom",
+                "email": "Email",
+                "subject": "Objet",
+                "option": {
+                    "title": "Sélectionnez le type de réunion",
+                    "one": "Google Meet",
+                    "two": "Appel Téléphonique",
+                    "three": "Conversation Telegram"
+                },
+                "date": {
+                    "choice": "Sélectionnez l'heure de la réunion",
+                    "no choice": "Tous les rendez-vous sont pris"
+                },
+                "number": "Numéro",
+                "message": "Message"
+            },
+            "button": {
+                "title": "Prendre Rendez-vous",
+                "ok": "Confirmer",
+                "no": "Annuler"
             }
         }
     }
