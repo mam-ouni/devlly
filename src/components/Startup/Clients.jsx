@@ -3,16 +3,18 @@ import React from 'react';
 import data from '@/data/Startup/clients.json';
 import appData from '@/data/app-data.json';
 import Split from '../Common/Split';
+import { useTranslation } from 'react-i18next';
 
 function Clients({ lightMode }) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   return (
     <div className="clients section-padding pb-100 position-re">
       <div className="container">
         <div className="row justify-content-center mb-80">
           <div className="col-lg-6 text-center">
-            <h6><span className="fz-14">03 . </span> Clients</h6>
+            <h6><span className="fz-14">03 . </span> {t('home page.clients.title')}</h6>
             <div className="text">
-              <h3>We create <span className="sub-font">experiences</span> and turn ideas into reality.</h3>
+              <h3>{t('home page.clients.span1')} <span className="sub-font">{t('home page.clients.span2')}</span> {t('home page.clients.span3')}</h3>
             </div>
           </div>
         </div>

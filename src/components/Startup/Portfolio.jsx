@@ -1,19 +1,21 @@
 import React from 'react';
 //= Data
 import data from '@/data/Startup/portfolio.json';
+import { useTranslation } from 'react-i18next';
 
 function Portfolio() {
+  const {t} = useTranslation('en' , {useSuspense : false});
   return (
     <section className="portfolio section-padding">
       <div className="container">
         <div className="sec-head md-mb80">
           <div className="row">
             <div className="col-lg-4">
-              <h6><span className="fz-14">02 . </span> Our Portfolio</h6>
+              <h6><span className="fz-14">02 . </span> {t('home page.portfolio.title')}</h6>
             </div>
             <div className="col-lg-5 offset-lg-3">
               <div className="text">
-                <h3 className="lg-text text-u">Case Studies</h3>
+                <h3 className="lg-text text-u">{t('home page.portfolio.title2')}</h3>
               </div>
             </div>
           </div>
@@ -28,7 +30,7 @@ function Portfolio() {
               </div>
               <div className="cont mt-30 d-flex">
                 <div>
-                  <h6 className="line-height-1">From our gallery</h6>
+                  <h6 className="line-height-1"> {t('home page.portfolio.title3')} </h6>
                   <p>{data[0].type}</p>
                 </div>
                 <div className="ml-auto">
@@ -48,7 +50,7 @@ function Portfolio() {
                   </div>
                   <div className="cont mt-30 d-flex">
                     <div>
-                      <h6 className="line-height-1">From our gallery</h6>
+                      <h6 className="line-height-1">{t('home page.portfolio.title3')}</h6>
                       <p>{data[1].type}</p>
                     </div>
                     <div className="ml-auto">
@@ -70,7 +72,7 @@ function Portfolio() {
                   </div>
                   <div className="cont mt-30 d-flex">
                     <div>
-                      <h6 className="line-height-1">From our gallery</h6>
+                      <h6 className="line-height-1">{t('home page.portfolio.title3')}</h6>
                       <p>{data[2].type}</p>
                     </div>
                     <div className="ml-auto">
@@ -92,7 +94,7 @@ function Portfolio() {
                   </div>
                   <div className="cont mt-30 d-flex">
                     <div>
-                      <h6 className="line-height-1">From our gallery</h6>
+                      <h6 className="line-height-1">{t('home page.portfolio.title3')}</h6>
                       <p>{data[3].type}</p>
                     </div>
                     <div className="ml-auto">

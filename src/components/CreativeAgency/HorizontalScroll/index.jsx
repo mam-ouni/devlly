@@ -29,6 +29,7 @@ function HzScroll({ lightMode }) {
   }, []);
 
   function handleResize() {
+    setTimeout(()=> {
     if (window.innerWidth < 991 && document.querySelector('.thecontainer').style.maxHeight) {
       location.reload();
     } else if (window.innerWidth > 991 && !document.querySelector('.thecontainer').style.maxHeight) {
@@ -45,6 +46,7 @@ function HzScroll({ lightMode }) {
         }
       });
     }
+  },200);
   }
 
   return (

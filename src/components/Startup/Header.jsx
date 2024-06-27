@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 //= Scripts
 import loadBackgroudImages from '@/common/loadBackgroudImages';
+import { useTranslation } from 'react-i18next';
+
 
 function Header({ lightMode }) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   useEffect(() => {
     loadBackgroudImages();
   }, []);
@@ -14,9 +17,9 @@ function Header({ lightMode }) {
           <div className="col-lg-11">
             <div className="caption text-center mt-50">
               <div className="sec-lg-head">
-                <h6 className="dot-titl-non mb-15">Business Startup</h6>
+                <h6 className="dot-titl-non mb-15">{t('home page.header.title')}</h6>
               </div>
-              <h1 className="fw-700 fz-80">We’re <span className="img-in-text icon-img-120 radius-30 bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/about/1.jpg`}></span> sharp brands <span className="sub-font">creators</span> open for any <span className="icon-img-60"><img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/star.png`} alt="" /></span> kind of <span className="stroke fw-800">new</span> works
+              <h1 className="fw-700 fz-80">{t('home page.header.span1')} <span className="img-in-text icon-img-120 radius-30 bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/about/1.jpg`}></span> {t('home page.header.span2')} <span className="sub-font">{t('home page.header.span3')}</span> {t('home page.header.span4')} <span className="icon-img-60"><img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/star.png`} alt="" /></span> {t('home page.header.span5')} <span className="stroke fw-800">{t('home page.header.span6')}</span> {t('home page.header.span7')}
               </h1>
             </div>
           </div>

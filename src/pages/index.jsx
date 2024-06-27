@@ -28,12 +28,12 @@ function HomeStartup() {
   return (
     <>
       <Head>
-        <title>Geekfolio - Startup</title>
+        <title>Devlly Home</title>
       </Head>
 
       <Loader />
       <Navbar noStatic mainBg />
-      <main>
+      <main style={{width:"100vw"}}>
         <Header />
         <Marq />
         <Services />

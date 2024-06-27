@@ -1,5 +1,6 @@
 body {
   padding: 0 !important;
+  width: 100vw !important;
 }
 
 .lg-react-element {

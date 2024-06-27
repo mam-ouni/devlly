@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 //= Data
 import data from '@/data/Startup/services.json';
+import { useTranslation } from 'react-i18next';
 
 function Services({ lightMode }) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   useEffect(() => {
     if (window.innerWidth > 991) {
       let gallery = document.querySelector('.metro .items')
@@ -105,15 +107,15 @@ function Services({ lightMode }) {
       <div className="container ontop">
         <div className="row">
           <div className="col-lg-4">
-            <h6><span className="fz-14">01 . </span> Services</h6>
+            <h6><span className="fz-14">01 . </span> {t('home page.services.title')}</h6>
           </div>
           <div className="col-lg-6 offset-lg-1">
             <div className="text">
-              <h3>We create <span className="sub-font">experiences</span> and turn ideas into reality.</h3>
+              <h3>{t('home page.services.span1')} <span className="sub-font">{t('home page.services.span2')}</span> {t('home page.services.span3')}</h3>
             </div>
             <div className="row mt-40">
               <div className="col-md-9 offset-md-2">
-                <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Wiusmod tempor incididunt.</p>
+                <p>{t('home page.services.paragraph')}</p>
               </div>
             </div>
           </div>
@@ -128,9 +130,9 @@ function Services({ lightMode }) {
                   <img src={`/${lightMode ? 'light' : 'dark'}/${item.image}`} alt="" />
                 </span>
                 <h5 className="mb-20 fw-700">
-                  <Link href="/dark/page-services">{item.title}</Link>
+                  <Link href="/dark/page-services">{t("home page.services.data."+item.id+".title")}</Link>
                 </h5>
-                <p>{item.text}</p>
+                <p>{t("home page.services.data."+item.id+".text")}</p>
               </div>
             ))
           }

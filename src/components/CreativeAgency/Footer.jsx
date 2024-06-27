@@ -3,9 +3,11 @@ import React, { useEffect } from 'react';
 import data from '@/data/app-data.json';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { useTranslation } from 'react-i18next';
 
 
 function Footer({ lightMode }) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   useEffect(() => {
     if (window.innerWidth > 991) {
       gsap.set('.footer-container', { yPercent: -50 })
@@ -32,17 +34,17 @@ function Footer({ lightMode }) {
             <div className="col-lg-3">
               <div className="colum md-mb50">
                 <div className="tit mb-20">
-                  <h6>Address</h6>
+                  <h6>{t('home page.footer.titres.one')}</h6>
                 </div>
                 <div className="text">
-                  <p>Germany — 785 15h Street, Office 478 Berlin, De 81566</p>
+                  <p>{t('home page.footer.address')}</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 offset-lg-1">
               <div className="colum md-mb50">
                 <div className="tit mb-20">
-                  <h6>Say Hello</h6>
+                  <h6>{t('home page.footer.titres.two')}</h6>
                 </div>
                 <div className="text">
                   <p className="mb-10">
@@ -56,7 +58,7 @@ function Footer({ lightMode }) {
             </div>
             <div className="col-lg-2 md-mb50">
               <div className="tit mb-20">
-                <h6>Social</h6>
+                <h6>{t('home page.footer.titres.three')}</h6>
               </div>
               <ul className="rest social-text">
                 <li>
@@ -75,12 +77,12 @@ function Footer({ lightMode }) {
             </div>
             <div className="col-lg-3">
               <div className="tit mb-20">
-                <h6>Newsletter</h6>
+                <h6>{t('home page.footer.titres.four')}</h6>
               </div>
               <div className="subscribe">
                 <form action="contact.php">
                   <div className="form-group rest">
-                    <input type="email" placeholder="Type Your Email" />
+                    <input type="email" placeholder={t('home page.footer.input')} />
                     <button type="submit">
                       <i className="fas fa-arrow-right"></i>
                     </button>
@@ -103,7 +105,7 @@ function Footer({ lightMode }) {
               <div className="col-lg-8">
                 <div className="copyright d-flex">
                   <div className="ml-auto">
-                    <p className="fz-13">© 2023 Geekfolio is Proudly Powered by <span className="underline"><a
+                    <p className="fz-13">© 2023 {t('home page.footer.copyright')} <span className="underline"><a
                       href={data.author_link}
                       target="_blank">{data.author}</a></span></p>
                   </div>

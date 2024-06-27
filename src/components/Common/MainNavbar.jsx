@@ -70,145 +70,45 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
 
         <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul className="navbar-nav">
-            <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <span className="rolling-text">{t('navbar.home.home')}</span>
-              </a>
-              <div className="dropdown-menu mega-menu">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-3">
-                      <div className="clumn">
-                        <div className="title">
-                          <h6 className="sub-title ls1">{t('navbar.home.Home Dark.Home Dark')}</h6>
-                        </div>
-                        <div className="links">
-                          <Link className="dropdown-item" href="/dark/home-main">{t('navbar.home.Home Dark.Main Home')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-corporate">{t('navbar.home.Home Dark.Corporate Business')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-onepage">{t('navbar.home.Home Dark.Home One page')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-digital-agency">{t('navbar.home.Home Dark.Digital Agency')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-freelancer">{t('navbar.home.Home Dark.Freelancer')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-marketing-agency">{t('navbar.home.Home Dark.Marketing Agency')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-creative-agency">{t('navbar.home.Home Dark.Creative Agency')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-startup">{t('navbar.home.Home Dark.Startup Bussines')}</Link>
-                          <Link className="dropdown-item" href="/dark/home-architecture">{t('navbar.home.Home Dark.Architecture')}</Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3">
-                      <div className="clumn">
-                        <div className="title">
-                          <h6 className="sub-title ls1">{t('navbar.home.Home Light.Home Light')}</h6>
-                        </div>
-                        <div className="links">
-                          <Link className="dropdown-item" href="/light/home-main">{t('navbar.home.Home Light.Main Home')}</Link>
-                          <Link className="dropdown-item" href="/light/home-corporate">{t('navbar.home.Home Light.Corporate Business')}</Link>
-                          <Link className="dropdown-item" href="/light/home-onepage">{t('navbar.home.Home Light.Home One page')}</Link>
-                          <Link className="dropdown-item" href="/light/home-digital-agency">{t('navbar.home.Home Light.Digital Agency')}</Link>
-                          <Link className="dropdown-item" href="/light/home-freelancer">{t('navbar.home.Home Light.Freelancer')}</Link>
-                          <Link className="dropdown-item" href="/light/home-marketing-agency">{t('navbar.home.Home Light.Marketing Agency')}</Link>
-                          <Link className="dropdown-item" href="/light/home-creative-agency">{t('navbar.home.Home Light.Creative Agency')}</Link>
-                          <Link className="dropdown-item" href="/light/home-startup">{t('navbar.home.Home Light.Startup Bussines')}</Link>
-                          <Link className="dropdown-item" href="/light/home-architecture">{t('navbar.home.Home Light.Architecture')}</Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3">
-                      <div className="clumn">
-                        <div className="title">
-                          <h6 className="sub-title ls1">{t('navbar.home.Showcases.Showcases')}</h6>
-                        </div>
-                        <div className="links">
-                          <Link className="dropdown-item" href="/dark/showcase-parallax-slider">{t('navbar.home.Showcases.Parallax Slider')}</Link>
-                          <Link className="dropdown-item" href="/dark/showcase-frame-slider">{t('navbar.home.Showcases.Frame Slider')}</Link>
-                          <Link className="dropdown-item" href="/dark/showcase-circle-slider">{t('navbar.home.Showcases.Circle Slider')}</Link>
-                          <Link className="dropdown-item" href="/dark/showcase-carousel">{t('navbar.home.Showcases.Showcase Carousel')}</Link>
-                          <Link className="dropdown-item" href="/dark/showcase-interactive-center-horizontal">{t('navbar.home.Showcases.Interactive Links1')}</Link>
-                          <Link className="dropdown-item" href="/dark/showcase-interactive-center">{t('navbar.home.Showcases.Interactive Links2')}</Link>
-                          <Link className="dropdown-item" href="/dark/showcase-parallax">{t('navbar.home.Showcases.Vertical Parallax')}</Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3">
-                      <div className="clumn">
-                        <div className="title">
-                          <h6 className="sub-title ls1">{t('navbar.home.Showcases Light.Showcases Light')}</h6>
-                        </div>
-                        <div className="links">
-                          <Link className="dropdown-item" href="/light/showcase-parallax-slider">{t('navbar.home.Showcases Light.Parallax Slider')}</Link>
-                          <Link className="dropdown-item" href="/light/showcase-carousel">{t('navbar.home.Showcases Light.Showcase Carousel')}</Link>
-                          <Link className="dropdown-item" href="/light/showcase-frame-slider">{t('navbar.home.Showcases Light.Frame Slider')}</Link>
-                          <Link className="dropdown-item" href="/light/showcase-circle-slider">{t('navbar.home.Showcases Light.Circle Slider')}</Link>
-                          <Link className="dropdown-item" href="/light/showcase-interactive-center-horizontal">{t('navbar.home.Showcases Light.Interactive Links1')}</Link>
-                          <Link className="dropdown-item" href="/light/showcase-interactive-center">{t('navbar.home.Showcases Light.Interactive Links2')}</Link>
-                          <Link className="dropdown-item" href="/light/showcase-parallax">{t('navbar.home.Showcases Light.Vertical Parallax')}</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <li className="nav-item ">
+              <Link className="nav-link" href={`/`}><span className="rolling-text">{t('home page.navbar.home')}</span></Link>
             </li>
             <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span className="rolling-text">{t('navbar.pages.pages')}</span></a>
+              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span className="rolling-text">{t('home page.navbar.pages.pages')}</span></a>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-about`}>{t('navbar.pages.About')}</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-services`}>{t('navbar.pages.Services')}</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-team`}>{t('navbar.pages.Our Team')}</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}>{t('navbar.pages.Contact Us')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-about`}>{t('home page.navbar.pages.about')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-services`}>{t('home page.navbar.pages.services')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-team`}>{t('home page.navbar.pages.our team')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}>{t('home page.navbar.pages.contact us')}</Link>
+              </div>
+            </li>
+            <li className="nav-item ">
+              <Link className="nav-link" href={`/portfolio`}><span className="rolling-text">{t('home page.navbar.portfolio')}</span></Link>
+            </li>
+            <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
+              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <span className="rolling-text">{t('home page.navbar.blogs.blogs')}</span>
+              </a>
+              <div className="dropdown-menu">
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-classic`}>{t('home page.navbar.blogs.blog standerd')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-list`}>{t('home page.navbar.blogs.blog list')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-half-img`}>{t('home page.navbar.blogs.image out frame')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-details`}>{t('home page.navbar.blogs.blog details')}</Link>
               </div>
             </li>
             <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
               <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <span className="rolling-text">Portfolio</span>
-              </a>
-              <ul className="dropdown-menu">
-                <li className="dropdown-item" onMouseMove={handleDropdownSideMouseMove} onMouseLeave={handleDropdownSideMouseLeave}>
-                  <a href="#0">Classic Grid <i className="fas fa-angle-right icon-arrow"></i></a>
-                  <ul className="dropdown-side">
-                    <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-grid-2`}>Grid 2 Columns</Link></li>
-                    <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-grid-3`}>Grid 3 Columns</Link></li>
-                    <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-grid-4`}>Grid 4 Columns</Link></li>
-                  </ul>
-                </li>
-                <li className="dropdown-item" onMouseMove={handleDropdownSideMouseMove} onMouseLeave={handleDropdownSideMouseLeave}>
-                  <a href="#0">Masonry <i className="fas fa-angle-right icon-arrow"></i></a>
-                  <ul className="dropdown-side">
-                    <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-masonry-2`}>Masonry 2 Columns</Link></li>
-                    <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-masonry-3`}>Masonry 3 Columns</Link></li>
-                    <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-masonry-4`}>Masonry 4 Columns</Link></li>
-                  </ul>
-                </li>
-                <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-metro`}>Portfolio Metro</Link></li>
-                <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-modern`}>Modern Grid</Link></li>
-                <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/project-details1`}>Project Details 1</Link></li>
-                <li><Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/project-details2`}>Project Details 2</Link></li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <span className="rolling-text">Blogs</span>
+                <span className="rolling-text">{t('home page.navbar.shop.shop')}</span>
               </a>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-classic`}>Blog Standerd</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-list`}>Blog List</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-half-img`}>Image Out Frame</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/blog-details`}>Blog Details</Link>
-              </div>
-            </li>
-            <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <span className="rolling-text">Shop</span>
-              </a>
-              <div className="dropdown-menu">
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-list`}>Shop List</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-product`}>Single Product</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-cart`}>Cart</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-checkout`}>Checkout</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-list`}>{t('home page.navbar.shop.shop list')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-product`}>{t('home page.navbar.shop.single product')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-cart`}>{t('home page.navbar.shop.cart')}</Link>
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-checkout`}>{t('home page.navbar.shop.checkout')}</Link>
               </div>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}><span className="rolling-text">Contact</span></Link>
+              <Link className="nav-link" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}><span className="rolling-text">{t('home page.navbar.contact')}</span></Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link d-flex align-items-center justify-content-center" href={`/appointment`}><span style={{borderRadius : '10px'}} className="rolling-text bg-light text-dark px-2">Appointment</span></Link>

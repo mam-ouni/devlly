@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 //= Data
 import data from '@/data/Startup/testimonials.json';
+import { useTranslation } from 'react-i18next';
 
 const swiperOptions = {
+  
   modules: [Navigation, Pagination],
   slidesPerView: 1,
   loop: true,
@@ -22,6 +24,7 @@ const swiperOptions = {
 }
 
 function Testimonials({ lightMode }) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   const [loadSwiper, setLoadSwiper] = useState(false);
 
   useEffect(() => {
@@ -51,8 +54,8 @@ function Testimonials({ lightMode }) {
                                         className="circle-img" />
                                     </div>
                                     <div className="info">
-                                      <h6>{item.name}</h6>
-                                      <p className="sub-title">{item.position}</p>
+                                      <h6>{t('home page.testimonials.data.'+item.id+".name")}</h6>
+                                      <p className="sub-title">{t('home page.testimonials.data.'+item.id+".position")}</p>
                                     </div>
                                     <div className="arrow sub-bg"></div>
                                   </div>
@@ -63,7 +66,7 @@ function Testimonials({ lightMode }) {
                                   <div className="mb-30 icon-img-80 opacity-1">
                                     <img src="/dark/assets/imgs/svg-assets/quote.png" alt="" />
                                   </div>
-                                  <h4 className="fw-300">{item.content}</h4>
+                                  <h4 className="fw-300">{t('home page.testimonials.data.'+item.id+".content")}</h4>
                                 </div>
                               </div>
                             </div>

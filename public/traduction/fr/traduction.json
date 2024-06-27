@@ -1,65 +1,117 @@
 {
-    "navbar":   {
-        "home" : {
-            "home" : "Accueil" ,
-            "Home Dark" : {
-                "Home Dark" : "Accueil Sombre",
-                "Main Home" : "Accueil Principal" ,
-                "Corporate Business" : "Entreprise Corporative" ,
-                "Home One page" : "Accueil One page" , 
-                "Digital Agency" : "Agence Digitale" , 
-                "Freelancer" : "Freelance" , 
-                "Marketing Agency" : "Agence de Marketing" , 
-                "Creative Agency" : "Agence Créative" , 
-                "Startup Bussines" : "Entreprise Startup", 
-                "Architecture" : "Architecture"
-                
+    "home page": {
+        "navbar": {
+            "home": "Accueil",
+            "pages": {
+                "pages": "pages",
+                "about": "à propos",
+                "services": "services",
+                "our team": "notre équipe",
+                "contact us": "nous contacter"
             },
-            "Home Light" : {
-                "Home Light" : "Accueil Clair",
-                "Main Home" : "Accueil Principal" ,
-                "Corporate Business" : "Entreprise Corporative" ,
-                "Home One page" : "Accueil One page" , 
-                "Digital Agency" : "Agence Digitale" , 
-                "Freelancer" : "Freelance" , 
-                "Marketing Agency" : "Agence de Marketing" , 
-                "Creative Agency" : "Agence Créative" , 
-                "Startup Bussines" : "Entreprise Startup", 
-                "Architecture" : "Architecture"
-                
+            "portfolio": "portfolio",
+            "blogs": {
+                "blogs": "blogs",
+                "blog standerd": "blog standard",
+                "blog list": "liste de blogs",
+                "image out frame": "image hors cadre",
+                "blog details": "détails du blog"
             },
-            "Showcases" :{
-                "Showcases" : "Présentations" ,
-                "Parallax Slider" : "Curseur Parallaxe" ,
-                "Frame Slider" : "Curseur à Cadre" ,
-                "Circle Slider" : "Curseur Circulaire" ,
-                "Showcase Carousel" : "Carrousel de Présentation" ,
-                "Interactive Links1" : "Liens Interactifs1" ,
-                "Interactive Links2" : "Liens Interactifs2" ,
-                "Vertical Parallax" : "Parallaxe Vertical"
+            "shop": {
+                "shop": "boutique",
+                "shop list": "liste de la boutique",
+                "single product": "produit unique",
+                "cart": "panier",
+                "checkout": "paiement"
             },
-            "Showcases Light" : {
-                "Showcases Light" : "Présentations Claires" ,
-                "Parallax Slider" : "Curseur Parallaxe" ,
-                "Showcase Carousel" : "Carrousel de Présentation" ,
-                "Frame Slider" : "Curseur à Cadre" ,
-                "Circle Slider" : "Curseur Circulaire" ,
-                "Interactive Links1" : "Liens Interactifs1" ,
-                "Interactive Links2" : "Liens Interactifs2" ,
-                "Vertical Parallax" : "Parallaxe Vertical" 
-            }
-
-        } ,
-        "pages" : {
-            "pages" : "Pages" ,
-            "About" : "À Propos" ,
-            "Services" : "Services" ,
-            "Our Team" : "Notre Équipe" ,
-            "Contact Us" : "Contactez-nous" 
+            "contact": "contact"
         },
-        "portfolio" : "PORTFOLIO" ,
-        "blogs" : "BLOGS" , 
-        "shop"  : "BOUTIQUE" ,
-        "contact" : "CONTACT"
+        "header": {
+            "title": "startup d'affaires",
+            "span1": "Nous sommes",
+            "span2": "créateurs de",
+            "span3": "marques acérées",
+            "span4": "ouverts à tout",
+            "span5": "type de",
+            "span6": "nouveaux",
+            "span7": "projets"
+        },
+        "marq": {
+            "first": "Expérience UI-UX",
+            "second": "Développement Web",
+            "third": "Marketing Digital",
+            "fourth": "Conception de Produits",
+            "fifth": "Solutions Mobiles"
+        },
+        "services": {
+            "title": "services",
+            "span1": "Nous créons",
+            "span2": "des expériences",
+            "span3": "et transformons les idées en réalité.",
+            "paragraph": "Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Wiusmod tempor incididunt.",
+            "data": {
+                "1": {
+                    "title": "Vision Créative",
+                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                },
+                "2": {
+                    "title": "Production Unique",
+                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                },
+                "3": {
+                    "title": "Rebranding",
+                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                },
+                "4": {
+                    "title": "Identité Corporative",
+                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                },
+                "5": {
+                    "title": "Vision Créative",
+                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                }
+            }
+        },
+        "portfolio": {
+            "title": "Notre Portfolio",
+            "title2": "Études de Cas",
+            "title3": "De notre galerie"
+        },
+        "testimonials": {
+            "data": {
+                "1": {
+                    "name": "Leonard Heiser",
+                    "position": "Client",
+                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                },
+                "2": {
+                    "name": "Leonard 02",
+                    "position": "Client",
+                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                },
+                "3": {
+                    "name": "Leonard 03",
+                    "position": "Client",
+                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                },
+                "4": {
+                    "name": "Leonard 04",
+                    "position": "Client",
+                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                }
+            }
+        },
+        "clients": {
+            "title": "Clients",
+            "span1": "Nous créons",
+            "span2": "des expériences",
+            "span3": "et transformons les idées en réalité."
+        },
+        "hzscroll": {
+            "intro": {
+                "titre": "Récompenses",
+                "titre2": "Reconnaissance"
+            }
+        }
     }
 }

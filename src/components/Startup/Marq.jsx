@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Marq() {
+  const {t} = useTranslation('en' , {useSuspense : false});
   return (
     <section className="serv-marq skew ontop" style={{marginTop:'10vh'}}>
       <div className="container-fluid">
@@ -10,36 +12,36 @@ function Marq() {
               <div className="slide-har st1 strok">
                 <div className="box">
                   <div className="item">
-                    <h4>UI-UX Experience</h4>
+                    <h4>{t('home page.marq.first')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Web Development</h4>
+                    <h4>{t('home page.marq.second')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Digital Marketing</h4>
+                    <h4>{t('home page.marq.third')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Product Design</h4>
+                    <h4>{t('home page.marq.fourth')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Mobile Solutions</h4>
+                    <h4>{t('home page.marq.fifth')}</h4>
                   </div>
                 </div>
                 <div className="box">
                   <div className="item">
-                    <h4>UI-UX Experience</h4>
+                    <h4>{t('home page.marq.first')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Web Development</h4>
+                    <h4>{t('home page.marq.second')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Digital Marketing</h4>
+                    <h4>{t('home page.marq.third')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Product Design</h4>
+                    <h4>{t('home page.marq.fourth')}</h4>
                   </div>
                   <div className="item">
-                    <h4>Mobile Solutions</h4>
+                    <h4>{t('home page.marq.fifth')}</h4>
                   </div>
                 </div>
               </div>

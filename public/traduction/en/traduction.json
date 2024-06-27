@@ -1,65 +1,211 @@
 {
-    "navbar":   {
-        "home" : {
+    "home page":   {
+        "navbar" : {
             "home" : "Home" ,
-            "Home Dark" : {
-                "Home Dark" : "Home Dark",
-                "Main Home" : "Main Home" ,
-                "Corporate Business" : "Corporate Business" ,
-                "Home One page" : "Home One page" , 
-                "Digital Agency" : "Digital Agency" , 
-                "Freelancer" : "Freelancer" , 
-                "Marketing Agency" : "Marketing Agency" , 
-                "Creative Agency" : "Creative Agency" , 
-                "Startup Bussines" : "Startup Bussines", 
-                "Architecture" : "Architecture"
-                
+            "pages" : {
+                "pages" : "pages",
+                "about" : "about" ,
+                "services" : "services" ,
+                "our team" : "our team" , 
+                "contact us" : "contact us" 
             },
-            "Home Light" : {
-                "Home Light" : "Home Light",
-                "Main Home" : "Main Home" ,
-                "Corporate Business" : "Corporate Business" ,
-                "Home One page" : "Home One page" , 
-                "Digital Agency" : "Digital Agency" , 
-                "Freelancer" : "Freelancer" , 
-                "Marketing Agency" : "Marketing Agency" , 
-                "Creative Agency" : "Creative Agency" , 
-                "Startup Bussines" : "Startup Bussines", 
-                "Architecture" : "Architecture"
-                
+            "portfolio" : "portfolio" ,
+            "blogs" :{
+                "blogs" : "blogs" ,
+                "blog standerd" : "blog standerd" ,
+                "blog list" : "blog list" ,
+                "image out frame" : "image out frame" ,
+                "blog details" : "blog details" 
             },
-            "Showcases" :{
-                "Showcases" : "Showcases" ,
-                "Parallax Slider" : "Parallax Slider" ,
-                "Frame Slider" : "Frame Slider" ,
-                "Circle Slider" : "Circle Slider" ,
-                "Showcase Carousel" : "Showcase Carousel" ,
-                "Interactive Links1" : "Interactive Links1" ,
-                "Interactive Links2" : "Interactive Links2" ,
-                "Vertical Parallax" : "Vertical Parallax" 
+            "shop" : {
+                "shop" :"shop" ,
+                "shop list" : "shop list" ,
+                "single product" : "single product" ,
+                "cart" : "cart" ,
+                "checkout" : "checkout" 
             },
-            "Showcases Light" : {
-                "Showcases Light" :"Showcases Light" ,
-                "Parallax Slider" : "Parallax Slider" ,
-                "Showcase Carousel" : "Showcase Carousel" ,
-                "Frame Slider" : "Frame Slider" ,
-                "Circle Slider" : "Circle Slider" ,
-                "Interactive Links1" : "Interactive Links1" ,
-                "Interactive Links2" : "Interactive Links2" ,
-                "Vertical Parallax" : "Vertical Parallax" 
-            }
-
-        } ,
-        "pages" : {
-            "pages" : "Pages" ,
-            "About" : "About" ,
-            "Services" : "Services" ,
-            "Our Team" : "Our Team" ,
-            "Contact Us" : "Contact Us" 
+            "contact" : "contact"
         },
-        "portfolio" : "PORTFOLIO" ,
-        "blogs" : "BLOGS" , 
-        "shop"  : "SHOP" ,
-        "contact" : "CONTACT"
+        "header" : {
+            "title" :"busniss startup",
+            "span1" :"We're",
+            "span2" :"sharp brands",
+            "span3" :"creators",
+            "span4" :"open for any",
+            "span5" :"kind of",
+            "span6" :"new",
+            "span7" :"works"
+        },
+        "marq" :{
+            "first" :"UI-UX Experience" ,
+            "second" :"Web Development" ,
+            "third" :"Digital Marketing" ,
+            "fourth" :"Product Design" ,
+            "fifth" :"Mobile Solutions"
+
+
+        },
+        "services" : {
+            "title" :"services" ,
+            "span1" : "We create" ,
+            "span2" : "experiences" ,
+            "span3" : "and turn ideas into reality." ,
+            "paragraph" :"Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Wiusmod tempor incididunt." ,
+            "data" : {
+                "1" : {
+                    "title" : "Creative Vision",
+                    "text": "Creating a higher spacing and how people move through a unique."
+                },
+                "2":{
+                    "title" : "Unique Production",
+                    "text": "Creating a higher spacing and how people move through a unique."
+                },
+                "3" :{
+                    "title" : "Rebranding",
+                    "text": "Creating a higher spacing and how people move through a unique."
+                },
+                "4":{
+                    "title" : "Corporate Identity",
+                    "text": "Creating a higher spacing and how people move through a unique."
+                },
+                "5" :{
+                    "title" : "Creative Vision",
+                    "text": "Creating a higher spacing and how people move through a unique."
+                }
+            }
+        },
+        "portfolio" :{
+            "title" : "Our Portfolio",
+            "title2" : "Case Studies",
+            "title3" : "From our gallery"
+        },
+        "testimonials" :{
+            "data" : {
+                "1" : {
+                    "name": "Leonard Heiser",
+                    "position": "Customer",
+                    "content": "I have been hiring people in this space for a number of years and I have never seen this level of professionalism. It really feels like you are working with a team that can get the job done."
+                },
+                "2":{
+                    "name": "Leonard 02",
+                    "position": "Customer",
+                    "content": "I have been hiring people in this space for a number of years and I have never seen this level of professionalism. It really feels like you are working with a team that can get the job done."
+                },
+                "3" :{
+                    "name": "Leonard 03",
+                    "position": "Customer",
+                    "content": "I have been hiring people in this space for a number of years and I have never seen this level of professionalism. It really feels like you are working with a team that can get the job done."
+                },
+                "4":{
+                    "name": "Leonard 04",
+                    "position": "Customer",
+                    "content": "I have been hiring people in this space for a number of years and I have never seen this level of professionalism. It really feels like you are working with a team that can get the job done."
+                }
+            }
+        },
+        "clients" : {
+            "title" :"Clients" ,
+            "span1" : "We create" ,
+            "span2" : "experiences" ,
+            "span3" : "and turn ideas into reality."
+        },
+        "hzscroll":{
+            "intro" :{
+                "titre" :"Awards" ,
+                "titre2" :"Recognition",
+                "paragraph" : "Our area of practice is quite wide: design, development. The experts who work at our web design studio know exactly how to make your project unique, fresh, and profitable.",
+                "stat" :{
+                    "sous titre1" : "Years of Experience" ,
+                    "sous titre2" : "Projects Complated" ,
+                    "sous titre3" : "Happy Customers" ,
+                    "sous titre4" : "Awards Winning" 
+                }
+            },
+            "awards" : {
+                "button" :"ACHIEVEMENTS",
+                "titre" :"Our Awards" ,
+                "paragraph" :"Nemo enim ipsam voluptatem quia voluptas sit odit aut fugit, sed quia." ,
+                "cadre" :{
+                    "one" :"Years of",
+                    "two" :"Experience"
+                },
+                "list" :{
+                    "one" :{
+                        "award" : "Independent of the year nomination",
+                        "by" :"Awwwards"
+                    },
+                    "two" :{
+                        "award" : "Awwwards Site of the Day",
+                        "by" :"Awwwards"
+                    },
+                    "three" :{
+                        "award" : "CSSDA Website of the Day",
+                        "by" :"Awwwards"
+                    },
+                    "four" :{
+                        "award" : "Sydney Design Awards – Silver",
+                        "by" :"Awwwards"
+                    }
+                }
+            },
+            "call to action" :{
+                "titre" :"Call to Action",
+                "titre2" : {
+                    "one" :"Have a project in mind?" ,
+                    "two" :"Let’s get to work."
+                },
+                "button" :"Get In Touch"
+            }
+        },
+        "footer" : {
+            "titres" :{
+                "one":"Address",
+                "two":"Say Hello",
+                "three":"Social",
+                "four" :"Newsletter"
+            },
+            "address" : "Germany — 785 15h Street, Office 478 Berlin, De 81566",
+            "input" :"Type Your Email",
+            "copyright" :"Geekfolio is Proudly Powered by ThemesCamp"
+        }
+    },
+    "login page": {
+        "titre" :"Login to connect and see the admin dashboard",
+        "paragraph":"Please enter your credentials to access the admin features.",
+        "zone":{
+            "titre":"Login",
+            "input":{
+                "one":"Email",
+                "two":"Password"
+            },
+            "button":"Login"
+        }
+    },
+    "contact page":{
+        "header" :{
+            "titles" :{
+                "one" : "Contact Us" ,
+                "two" : "Let's make" , 
+                "three" : "your brand brilliant!"
+            },
+            "paragraph": "We help our clients succeed by creating brand identities, digital experiences, and print materials that communicate clearly, achieve marketing goals, and look fantastic."
+        },
+        "form":{
+            "info":{
+                "titles" :{
+                    "one" : "Get In Touch" ,
+                    "two" : "Let's get in" , 
+                    "three" : "touch with us."
+                },
+                "paragraph": "If you would like to work with us or just want to get in touch, we’d love to hear from you!"
+            },
+            "input":{
+                "name":"Name",
+                "email":"Email",
+                "subject":"Subject",
+                "message":"Message"
+            },
+            "button":"Let's Talk"
+        }
     }
 }

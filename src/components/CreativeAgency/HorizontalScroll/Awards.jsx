@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 function Awards({ lightMode }) {
+  const {t} = useTranslation('en' , {useSuspense : false});
   return (
     <div className="panel awards-list main-bg">
       <div className="container mt-60">
@@ -10,11 +12,11 @@ function Awards({ lightMode }) {
             <div className="sec-lg-head mb-80">
               <div className="position-re">
                 <div className="fz-80">
-                  <h6 className="dot-titl mb-10">ACHIEVEMENTS</h6>
-                  <h2 className="fz-70 fw-700">Our Awards</h2>
+                  <h6 className="dot-titl mb-10">{t('home page.hzscroll.awards.button')}</h6>
+                  <h2 className="fz-70 fw-700">{t('home page.hzscroll.awards.titre')}</h2>
                 </div>
                 <div className="text mt-15">
-                  <p>Nemo enim ipsam voluptatem quia voluptas sit odit aut fugit, sed quia.</p>
+                  <p>{t('home page.hzscroll.awards.paragraph')}</p>
                 </div>
                 <div className="exp-box sub-bg mt-50 inline">
                   <div className="d-flex align-items-center">
@@ -22,7 +24,7 @@ function Awards({ lightMode }) {
                       <h2 className="fz-60">20</h2>
                     </div>
                     <div className="cont ml-30">
-                      <h6 className="sub-title">Years of <br /> Experience</h6>
+                      <h6 className="sub-title">{t('home page.hzscroll.awards.cadre.one')} <br /> {t('home page.hzscroll.awards.cadre.two')}</h6>
                     </div>
                   </div>
                   <div className="img-icon">
@@ -37,8 +39,8 @@ function Awards({ lightMode }) {
               <ul className="rest">
                 <li className="d-flex">
                   <div>
-                    <h6>Independent of the year nomination</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <h6>{t('home page.hzscroll.awards.list.one.award')}</h6>
+                    <span className="fz-14 opacity-8"><span className="date">2020</span> {t('home page.hzscroll.awards.list.one.by')}</span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
@@ -50,8 +52,8 @@ function Awards({ lightMode }) {
                 </li>
                 <li className="d-flex">
                   <div>
-                    <h6>Awwwards Site of the Day</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <h6>{t('home page.hzscroll.awards.list.two.award')}</h6>
+                    <span className="fz-14 opacity-8"><span className="date">2020</span> {t('home page.hzscroll.awards.list.two.by')}</span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
@@ -63,8 +65,8 @@ function Awards({ lightMode }) {
                 </li>
                 <li className="d-flex">
                   <div>
-                    <h6>CSSDA Website of the Day</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <h6>{t('home page.hzscroll.awards.list.three.award')}</h6>
+                    <span className="fz-14 opacity-8"><span className="date">2020</span>{t('home page.hzscroll.awards.list.three.by')} </span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
@@ -76,8 +78,8 @@ function Awards({ lightMode }) {
                 </li>
                 <li className="d-flex">
                   <div>
-                    <h6>Sydney Design Awards – Silver</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <h6>{t('home page.hzscroll.awards.list.four.award')}</h6>
+                    <span className="fz-14 opacity-8"><span className="date">2020</span> {t('home page.hzscroll.awards.list.four.by')}</span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
