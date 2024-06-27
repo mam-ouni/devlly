@@ -211,10 +211,10 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
               <Link className="nav-link" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}><span className="rolling-text">Contact</span></Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href={`/appointment`}><span className="rolling-text">Appointment</span></Link>
+              <Link className="nav-link d-flex align-items-center justify-content-center" href={`/appointment`}><span style={{borderRadius : '10px'}} className="rolling-text bg-light text-dark px-2">Appointment</span></Link>
             </li>
-            <li className="nav-item">
-              <select  href={`/${lightMode ? 'light' : 'dark'}/page-contact`}
+            <li className="nav-item d-flex align-items-center justify-content-center">
+              <select className='px-2 py-2 bg-dark text-light' style={{borderRadius :'10px'}} href={`/${lightMode ? 'light' : 'dark'}/page-contact`}
                 onChange={handleLangueChange}
                 defaultValue={"en"}
                 >

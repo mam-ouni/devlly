@@ -55,6 +55,11 @@
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 /* responsive */
+@media screen and (max-width : 998px) {
+    .Login_form{
+        width: 100%;
+    }
+}
 @media screen and (max-width : 576px) {
     .appointment .form .last > div,.appointment .form .last textarea{
         width: 100% !important;
