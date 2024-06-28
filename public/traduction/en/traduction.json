@@ -25,7 +25,8 @@
                 "checkout" : "checkout" 
             },
             "contact" : "contact",
-            "about" : "about"
+            "about" : "about",
+            "appointment" :"appointment"
         },
         "header" : {
             "title" :"busniss startup",
@@ -349,5 +350,94 @@
             "button":"Get In Touch"
         }
 
+    },
+    "all products page":{
+        "header":{
+            "sub title":"Our Works",
+            "title":"Masonry 2."
+        },
+        "2col":{
+            "title":"Filter By ",
+            "data":{
+                "All":"All",
+                "Branding":"Branding",
+                "Mobile App":"Mobile App",
+                "Creative":"Creative"
+            },
+            "gallery":{
+                "1":{
+                    "id": 1,
+                    "filter": "web",
+                    "image": "/dark/assets/imgs/works/grid2/1.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Character Design"
+                },
+                "2":{
+                    "id": 2,
+                    "filter": "app",
+                    "image": "/dark/assets/imgs/works/grid2/v1.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Character Design"
+                },
+                "3":{
+                    "id": 3,
+                    "filter": "brand",
+                    "image": "/dark/assets/imgs/works/grid2/v2.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Character Design"
+                },
+                "4":{
+                    "id": 4,
+                    "filter": "web",
+                    "image": "/dark/assets/imgs/works/grid2/2.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Character Design"
+                },
+                "5":{
+                    "id": 5,
+                    "filter": "brand",
+                    "image": "/dark/assets/imgs/works/grid2/3.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Character Design"
+                },
+                "6":{
+                    "id": 6,
+                    "filter": "app",
+                    "image": "/dark/assets/imgs/works/grid2/v3.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Character Design"
+                }
+            }
+        }
+    },
+    "product page":{
+        "header":{
+            "title":"Sinzere The Mission",
+            "sub title":"Digital Marketing"
+        },
+        "about":{
+            "title":"About the Project.",
+            "text":"Won’t seasons, appear days them stars replenish divided. All second forth. Him place was seas man and gathering creepeth called fly. Them sea place lights, midst bearing fourth above.",
+            "row":{
+                "title1":"Category",
+                "text1":"Digital Design",
+                "title2":"Customer",
+                "text2" :"ThemesCamp",
+                "title3":"Date",
+                "text3":"August 6, 2020"
+            }
+        },
+        "content":"Visual hierarchy is the principle of arranging elements to show their order of importance. Designers structure visual characteristics—e.g., menu icons—so users can understand information easily. By laying out elements logically and strategically, designers influence users’ perceptions and guide them to desired actions. Users notice larger elements more easily can convert.",
+        "call to action":{
+            "title":"Next Project",
+            "sub title":"Luxury Glassware.",
+            "button":"Next Project"
+        }
     }
 }

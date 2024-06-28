@@ -80,7 +80,7 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
                 <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-services`}>{t('home page.navbar.pages.services')}</Link>
                 <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-team`}>{t('home page.navbar.pages.our team')}</Link>
                 <Link className="dropdown-item" href={`/page-contact`}>{t('home page.navbar.pages.contact us')}</Link>
-                <Link className="dropdown-item" href={`/appointment`}>appointment</Link>
+                <Link className="dropdown-item" href={`/appointment`}>{t('home page.navbar.appointment')}</Link>
               </div>
             </li>
 
@@ -108,8 +108,8 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
                 <span className="rolling-text">{t('home page.navbar.shop.shop')}</span>
               </a>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-list`}>{t('home page.navbar.shop.shop list')}</Link>
-                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-product`}>{t('home page.navbar.shop.single product')}</Link>
+                <Link className="dropdown-item" href={`all-products`}>{t('home page.navbar.shop.shop list')}</Link>
+                <Link className="dropdown-item" href={`/product`}>{t('home page.navbar.shop.single product')}</Link>
                 {
                   /* 
                   <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/shop-cart`}>{t('home page.navbar.shop.cart')}</Link>
@@ -127,7 +127,7 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link d-flex align-items-center justify-content-center" href={`/appointment`}><span style={{borderRadius : '10px'}} className="rolling-text bg-light text-dark px-2">Appointment</span></Link>
+              <Link className="nav-link d-flex align-items-center justify-content-center" href={`/appointment`}><span style={{borderRadius : '10px'}} className="rolling-text bg-light text-dark px-2">{t('home page.navbar.appointment')}</span></Link>
             </li>
 
             <li className="nav-item d-flex align-items-center justify-content-center">

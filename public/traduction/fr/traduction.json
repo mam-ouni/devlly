@@ -3,49 +3,50 @@
         "navbar": {
             "home": "Accueil",
             "pages": {
-                "pages": "pages",
-                "about": "à propos",
-                "services": "services",
-                "our team": "notre équipe",
-                "contact us": "nous contacter"
+                "pages": "Pages",
+                "about": "À propos",
+                "services": "Services",
+                "our team": "Notre équipe",
+                "contact us": "Nous contacter"
             },
-            "portfolio": "portfolio",
+            "portfolio": "Portfolio",
             "blogs": {
-                "blogs": "blogs",
-                "blog standerd": "blog standard",
-                "blog list": "liste de blogs",
-                "image out frame": "image hors cadre",
-                "blog details": "détails du blog"
+                "blogs": "Blogs",
+                "blog standerd": "Blog standard",
+                "blog list": "Liste des blogs",
+                "image out frame": "Image hors cadre",
+                "blog details": "Détails du blog"
             },
             "shop": {
-                "shop": "boutique",
-                "shop list": "list des projets",
-                "single product": "produit unique",
-                "cart": "panier",
-                "checkout": "paiement"
+                "shop": "Boutique",
+                "shop list": "Liste des projets",
+                "single product": "Produit unique",
+                "cart": "Panier",
+                "checkout": "Paiement"
             },
-            "contact": "contact",
-            "about" :"à propos"
+            "contact": "Contact",
+            "about": "À propos",
+            "appointment": "Rendez-vous"
         },
         "header": {
-            "title": "startup d'affaires",
+            "title": "Startup business",
             "span1": "Nous sommes",
-            "span2": "créateurs de",
-            "span3": "marques acérées",
+            "span2": "créateurs de marques",
+            "span3": "pointues",
             "span4": "ouverts à tout",
             "span5": "type de",
             "span6": "nouveaux",
-            "span7": "projets"
+            "span7": "travaux"
         },
         "marq": {
             "first": "Expérience UI-UX",
             "second": "Développement Web",
             "third": "Marketing Digital",
-            "fourth": "Conception de Produits",
+            "fourth": "Conception de Produit",
             "fifth": "Solutions Mobiles"
         },
         "services": {
-            "title": "services",
+            "title": "Services",
             "span1": "Nous créons",
             "span2": "des expériences",
             "span3": "et transformons les idées en réalité.",
@@ -53,23 +54,23 @@
             "data": {
                 "1": {
                     "title": "Vision Créative",
-                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
                 },
                 "2": {
                     "title": "Production Unique",
-                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
                 },
                 "3": {
                     "title": "Rebranding",
-                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
                 },
                 "4": {
-                    "title": "Identité Corporative",
-                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                    "title": "Identité d'Entreprise",
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
                 },
                 "5": {
                     "title": "Vision Créative",
-                    "text": "Créer un espacement supérieur et comment les gens se déplacent à travers une expérience unique."
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
                 }
             }
         },
@@ -83,22 +84,22 @@
                 "1": {
                     "name": "Leonard Heiser",
                     "position": "Client",
-                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                    "content": "J'embauche des personnes dans ce domaine depuis plusieurs années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe qui peut faire le travail."
                 },
                 "2": {
                     "name": "Leonard 02",
                     "position": "Client",
-                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                    "content": "J'embauche des personnes dans ce domaine depuis plusieurs années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe qui peut faire le travail."
                 },
                 "3": {
                     "name": "Leonard 03",
                     "position": "Client",
-                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                    "content": "J'embauche des personnes dans ce domaine depuis plusieurs années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe qui peut faire le travail."
                 },
                 "4": {
                     "name": "Leonard 04",
                     "position": "Client",
-                    "content": "J'embauche des personnes dans ce domaine depuis de nombreuses années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe capable de faire le travail."
+                    "content": "J'embauche des personnes dans ce domaine depuis plusieurs années et je n'ai jamais vu ce niveau de professionnalisme. On a vraiment l'impression de travailler avec une équipe qui peut faire le travail."
                 }
             }
         },
@@ -112,37 +113,37 @@
             "intro": {
                 "titre": "Récompenses",
                 "titre2": "Reconnaissance",
-                "paragraph": "Notre domaine de pratique est assez vaste : conception, développement. Les experts qui travaillent dans notre studio de design web savent exactement comment rendre votre projet unique, frais et rentable.",
+                "paragraph": "Notre domaine de pratique est assez large: design, développement. Les experts qui travaillent dans notre studio de design web savent exactement comment rendre votre projet unique, frais et rentable.",
                 "stat": {
                     "sous titre1": "Années d'Expérience",
-                    "sous titre2": "Projets Réalisés",
+                    "sous titre2": "Projets Complétés",
                     "sous titre3": "Clients Satisfaits",
-                    "sous titre4": "Prix Gagnés"
+                    "sous titre4": "Récompenses Gagnées"
                 }
             },
             "awards": {
                 "button": "RÉALISATIONS",
-                "titre": "Nos Prix",
+                "titre": "Nos Récompenses",
                 "paragraph": "Nemo enim ipsam voluptatem quia voluptas sit odit aut fugit, sed quia.",
                 "cadre": {
-                    "one": "Années",
-                    "two": "d'Expérience"
+                    "one": "Années de",
+                    "two": "Expérience"
                 },
                 "list": {
                     "one": {
-                        "award": "Nomination de l'Indépendant de l'année",
+                        "award": "Nomination Indépendant de l'année",
                         "by": "Awwwards"
                     },
                     "two": {
-                        "award": "Awwwards Site of the Day",
+                        "award": "Site du Jour Awwwards",
                         "by": "Awwwards"
                     },
                     "three": {
-                        "award": "CSSDA Website of the Day",
+                        "award": "CSSDA Site du Jour",
                         "by": "Awwwards"
                     },
                     "four": {
-                        "award": "Sydney Design Awards – Silver",
+                        "award": "Prix de Design de Sydney – Argent",
                         "by": "Awwwards"
                     }
                 }
@@ -150,27 +151,27 @@
             "call to action": {
                 "titre": "Appel à l'Action",
                 "titre2": {
-                    "one": "Vous avez un projet en tête ?",
-                    "two": "Commençons à travailler."
+                    "one": "Vous avez un projet en tête?",
+                    "two": "Commençons."
                 },
-                "button": "Contactez-nous"
+                "button": "Entrer en Contact"
             }
         },
         "footer": {
             "titres": {
                 "one": "Adresse",
                 "two": "Dites Bonjour",
-                "three": "Réseaux Sociaux",
+                "three": "Social",
                 "four": "Newsletter"
             },
-            "address": "Allemagne — 785 15h Street, Office 478 Berlin, De 81566",
-            "input": "Tapez Votre Email",
+            "address": "Allemagne — 785 15h Street, Bureau 478 Berlin, De 81566",
+            "input": "Tapez votre email",
             "copyright": "Geekfolio est fièrement propulsé par ThemesCamp"
         }
     },
     "login page": {
-        "titre": "Connectez-vous pour voir le tableau de bord administrateur",
-        "paragraph": "Veuillez entrer vos identifiants pour accéder aux fonctionnalités administrateur.",
+        "titre": "Connectez-vous pour accéder au tableau de bord administrateur",
+        "paragraph": "Veuillez entrer vos identifiants pour accéder aux fonctionnalités administratives.",
         "zone": {
             "titre": "Connexion",
             "input": {
@@ -183,43 +184,43 @@
     "contact page": {
         "header": {
             "titles": {
-                "one": "Nous Contacter",
+                "one": "Nous contacter",
                 "two": "Rendons",
-                "three": "votre marque brillante !"
+                "three": "votre marque brillante!"
             },
-            "paragraph": "Nous aidons nos clients à réussir en créant des identités de marque, des expériences numériques et des supports imprimés qui communiquent clairement, atteignent les objectifs marketing et sont visuellement attrayants."
+            "paragraph": "Nous aidons nos clients à réussir en créant des identités de marque, des expériences numériques et des supports imprimés qui communiquent clairement, atteignent les objectifs marketing et sont esthétiquement attrayants."
         },
         "form": {
             "info": {
                 "titles": {
                     "one": "Entrer en Contact",
-                    "two": "Entrons en",
-                    "three": "contact avec nous."
+                    "two": "Entrons",
+                    "three": "en contact avec nous."
                 },
-                "paragraph": "Si vous souhaitez travailler avec nous ou simplement entrer en contact, nous serions ravis de vous entendre !"
+                "paragraph": "Si vous souhaitez travailler avec nous ou simplement entrer en contact, nous serions ravis de vous entendre!"
             },
             "input": {
                 "name": "Nom",
                 "email": "Email",
-                "subject": "Objet",
+                "subject": "Sujet",
                 "message": "Message"
             },
-            "button": "Discutons"
+            "button": "Parlons"
         }
     },
     "appo page": {
         "header": {
-            "title": "Prenons Rendez-vous",
+            "title": "Prenons rendez-vous",
             "paragraph": "Remplissez tous les champs avec vos informations spécifiques pour planifier une réunion avec l'administrateur."
         },
         "screen": {
             "title": "Rendez-vous",
-            "subject": "Objet",
+            "subject": "Sujet",
             "email": "Email",
             "date": "Date",
-            "in": "à",
+            "in": "en",
             "number": "Numéro",
-            "type": "Type de réunion",
+            "type": "Type de rencontre",
             "message": "Message",
             "name": "Nom"
         },
@@ -228,7 +229,7 @@
             "input": {
                 "name": "Nom",
                 "email": "Email",
-                "subject": "Objet",
+                "subject": "Sujet",
                 "option": {
                     "title": "Sélectionnez le type de réunion",
                     "one": "Google Meet",
@@ -247,6 +248,193 @@
                 "ok": "Confirmer",
                 "no": "Annuler"
             }
+        }
+    },
+    "about page": {
+        "header": {
+            "data": {
+                "sub title": "QUI SOMMES-NOUS?",
+                "title": "Nous sommes une agence numérique basée à Valence.",
+                "text": "À propos de nous"
+            },
+            "paragraph": "Nous aidons nos clients à réussir en créant des identités de marque, des expériences numériques et des supports imprimés qui communiquent clairement, atteignent les objectifs marketing et sont esthétiquement attrayants."
+        },
+        "story": {
+            "title": "Notre Histoire",
+            "text": "GeekFolio sont des experts en marketing numérique et peuvent collaborer avec vous pour mettre en œuvre des campagnes tactiques qui engagent et connectent les audiences tout en augmentant le ROI pour votre marque. Nous sommes des professionnels du SEO et du SEM et avons mis en œuvre des campagnes de recherche réussies pour les clients qui entraînent des améliorations super chargées dans les classements organiques, augmentent les visites et augmentent les revenus."
+        },
+        "services": {
+            "sub title": "Services en Vedette",
+            "title": "Nos Services",
+            "text": "Nemo enim ipsam voluptatem quia voluptas sit odit aut fugit, sed quia.",
+            "data": {
+                "one": {
+                    "image": "assets/imgs/serv-icons/0.png",
+                    "title": "Stratégie de Marque & <BR> Direction Artistique",
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
+                },
+                "two": {
+                    "image": "assets/imgs/serv-icons/1.png",
+                    "title": "Conception UX/UI & <BR> Conception de Site Web/Appli",
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
+                },
+                "three": {
+                    "image": "assets/imgs/serv-icons/2.png",
+                    "title": "Typographie & <BR> Production Vidéo",
+                    "text": "Créer un espacement plus élevé et comment les gens se déplacent à travers un unique."
+                }
+            }
+        },
+        "intro": {
+            "title": {
+                "one": "Regardez le processus",
+                "two": "créatif derrière notre",
+                "three": "marketing numérique."
+            },
+            "data": {
+                "one": {
+                    "title": "Le Pouvoir du Marketing d'Influence",
+                    "text": "Pris possession de mon âme entière, comme ces doux matins de printemps que je savoure avec tout mon être."
+                },
+                "two": {
+                    "title": "Design Unique et Influent",
+                    "text": "Pris possession de mon âme entière, comme ces doux matins de printemps que je savoure avec tout mon être."
+                },
+                "three": {
+                    "title": "Nous Construisons et Activons des Marques",
+                    "text": "Pris possession de mon âme entière, comme ces doux matins de printemps que je savoure avec tout mon être."
+                }
+            }
+        },
+        "team": {
+            "title": "Équipe",
+            "data": {
+                "one": {
+                    "image": "/dark/assets/imgs/team/1.jpg",
+                    "name": "adrian parody",
+                    "position": "Co-Fondateur"
+                },
+                "two": {
+                    "image": "/dark/assets/imgs/team/2.jpg",
+                    "name": "adrian parody",
+                    "position": "Co-Fondateur"
+                },
+                "three": {
+                    "image": "/dark/assets/imgs/team/3.jpg",
+                    "name": "adrian parody",
+                    "position": "Co-Fondateur"
+                },
+                "four": {
+                    "image": "/dark/assets/imgs/team/4.jpg",
+                    "name": "adrian parody",
+                    "position": "Co-Fondateur"
+                },
+                "five": {
+                    "image": "/dark/assets/imgs/team/3.jpg",
+                    "name": "adrian parody",
+                    "position": "Co-Fondateur"
+                }
+            }
+        },
+        "clients": {
+            "title": "Nous créons des expériences et transformons les idées en réalité."
+        },
+        "call to action": {
+            "title": {
+                "one": "Vous avez un projet en tête?",
+                "two": "Commençons ",
+                "three": "à travailler"
+            },
+            "button": "Entrer en Contact"
+        }
+    },
+    "all products page": {
+        "header": {
+            "sub title": "Nos Travaux",
+            "title": "Masonry 2."
+        },
+        "2col": {
+            "title": "Filtrer Par",
+            "data": {
+                "All": "Tous",
+                "Branding": "Branding",
+                "Mobile App": "Application Mobile",
+                "Creative": "Créatif"
+            },
+            "gallery": {
+                "1": {
+                    "id": 1,
+                    "filter": "web",
+                    "image": "/dark/assets/imgs/works/grid2/1.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Conception de Personnages"
+                },
+                "2": {
+                    "id": 2,
+                    "filter": "app",
+                    "image": "/dark/assets/imgs/works/grid2/v1.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Conception de Personnages"
+                },
+                "3": {
+                    "id": 3,
+                    "filter": "brand",
+                    "image": "/dark/assets/imgs/works/grid2/v2.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Conception de Personnages"
+                },
+                "4": {
+                    "id": 4,
+                    "filter": "web",
+                    "image": "/dark/assets/imgs/works/grid2/2.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Conception de Personnages"
+                },
+                "5": {
+                    "id": 5,
+                    "filter": "brand",
+                    "image": "/dark/assets/imgs/works/grid2/3.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Conception de Personnages"
+                },
+                "6": {
+                    "id": 6,
+                    "filter": "app",
+                    "image": "/dark/assets/imgs/works/grid2/v3.jpg",
+                    "type": "Design ART",
+                    "year": "2023",
+                    "title": "Conception de Personnages"
+                }
+            }
+        }
+    },
+    "product page": {
+        "header": {
+            "title": "Sinzere The Mission",
+            "sub title": "Marketing Numérique"
+        },
+        "about": {
+            "title": "À propos du Projet.",
+            "text": "Les saisons ne viendront pas, les jours apparaissent, les étoiles se reconstituent. Tous les deux. Lui, le lieu était les mers homme et la collecte se rampe appelée voler. Leur place de mer lumières, au milieu portant quatrième au-dessus.",
+            "row": {
+                "title1": "Catégorie",
+                "text1": "Design Numérique",
+                "title2": "Client",
+                "text2": "ThemesCamp",
+                "title3": "Date",
+                "text3": "6 août 2020"
+            }
+        },
+        "content": "La hiérarchie visuelle est le principe de l'agencement des éléments pour montrer leur ordre d'importance. Les designers structurent les caractéristiques visuelles—par exemple, les icônes de menu—pour que les utilisateurs puissent comprendre facilement l'information. En disposant les éléments de manière logique et stratégique, les designers influencent les perceptions des utilisateurs et les guident vers les actions souhaitées. Les utilisateurs remarquent plus facilement les éléments plus grands et peuvent se convertir.",
+        "call to action": {
+            "title": "Projet Suivant",
+            "sub title": "Verre de Luxe.",
+            "button": "Projet Suivant"
         }
     }
 }
