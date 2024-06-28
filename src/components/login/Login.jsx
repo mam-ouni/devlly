@@ -9,6 +9,7 @@ export default function Login() {
     email : '',
     password : '',
   })
+  const [show,setShow] = useState(false)
   const handleValues = (e) => {
     setValues(prev => ({
         ...prev,
@@ -27,13 +28,19 @@ export default function Login() {
   
     if (res.error) {
       // Handle error
-      console.error('Login failed:', res.error);
+      console.log('Login failed:', res.error);
+      setShow(true)
+      setTimeout(() => {
+        setShow(false)
+      }, 4000);
     } else {
       // Redirect to the callback URL on successful login
       router.push(res.url);
     }
   };
   return (
+      <>
+       {show && <small className='text-danger'>Login failed : no user found</small>}
        <form action='' className='Login_form px-3 py-3'>
            <h4> {t('login page.zone.titre')} </h4>
            <div className='d-flex gap-4 flex-column'>
@@ -42,5 +49,6 @@ export default function Login() {
            </div>
            <button className='mt-4 rounded btn btn-light text-dark w-100' onClick={(e)=>login(e)}>{t('login page.zone.button')}</button>
        </form>
+      </>
   )
 }

@@ -60,7 +60,7 @@ export default function index() {
       <Navbar mainBg />
       <main className='container' style={style}>
         <Header/>
-        <div className='form_container d-flex justify-content-center align-items-center w-100'>
+        <div className='form_container d-flex flex-column justify-content-center align-items-center gap-2 w-100'>
             <Login/>
         </div>
 
