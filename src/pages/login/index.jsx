@@ -10,6 +10,7 @@ import Header from '@/components/login/Head';
 import Login from '@/components/login/Login';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
+import { CircularProgress } from '@mui/material';
 export default function index() {
   const style = {
       marginTop: '6rem',
@@ -46,7 +47,9 @@ export default function index() {
       <Loader />
       <Navbar mainBg />
       <div style={{height : '600px'}} className='d-flex justify-content-center align-items-center'>
-        <h1>redirect to dashboard</h1>
+        <h2>
+          Redirect to dashboard
+        </h2>
       </div>
     </>
     )
