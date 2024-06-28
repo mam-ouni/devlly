@@ -1,0 +1,62 @@
+import React from 'react';
+//= Components
+import StatementSplitter from '@/components/Common/StatementSplitter';
+//= Data
+import data from '@/data/InnerPages/About/services.json';
+import { useTranslation } from 'react-i18next';
+
+function Services({ lightMode }) {
+  const {t} = useTranslation('en' , {useSuspense : false});
+  return (
+    <section className="serv-box section-padding">
+      <div className="container">
+        <div className="sec-lg-head mb-80">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="position-re">
+                <h6 className="dot-titl-non colorbg-3 mb-10"> {t('about page.services.sub title')} </h6>
+                <h2 className="fz-60 fw-700">{t('about page.services.title')}</h2>
+              </div>
+            </div>
+            <div className="col-lg-4 d-flex align-items-center">
+              <div className="text">
+                <p>{t('about page.services.text')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+              <div className="col-lg-4" >
+                <div className="serv-item md-mb50 radius-10">
+                  <div className="icon-img-60 mb-40">
+                    <img src={`/${lightMode ? 'light' : 'dark'}/${t('about page.services.data.one.image')}`} alt="" />
+                  </div>
+                  <h5 className="mb-30 pb-30 bord-thin-bottom"><StatementSplitter statement={t('about page.services.data.one.title')} /></h5>
+                  <p>{t('about page.services.data.one.text')}</p>
+                </div>
+              </div>
+              <div className="col-lg-4" >
+                <div className="serv-item md-mb50 radius-10">
+                  <div className="icon-img-60 mb-40">
+                    <img src={`/${lightMode ? 'light' : 'dark'}/${t('about page.services.data.two.image')}`} alt="" />
+                  </div>
+                  <h5 className="mb-30 pb-30 bord-thin-bottom"><StatementSplitter statement={t('about page.services.data.two.title')} /></h5>
+                  <p>{t('about page.services.data.two.text')}</p>
+                </div>
+              </div>
+              <div className="col-lg-4" >
+                <div className="serv-item md-mb50 radius-10">
+                  <div className="icon-img-60 mb-40">
+                    <img src={`/${lightMode ? 'light' : 'dark'}/${t('about page.services.data.three.image')}`} alt="" />
+                  </div>
+                  <h5 className="mb-30 pb-30 bord-thin-bottom"><StatementSplitter statement={t('about page.services.data.three.title')} /></h5>
+                  <p>{t('about page.services.data.three.text')}</p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Services

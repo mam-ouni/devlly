@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 //= Data
 import data from '@/data/Startup/team.json';
+import { useTranslation } from 'react-i18next';
+import { t } from 'i18next';
 
 const swiperOptions = {
   slidesPerView: 4,
@@ -80,19 +82,17 @@ function Team() {
         <div className="row">
           <div className="col-12" style={{ position: 'relative' }}>
             <div className="sec-head-lg text-center text-u mb-80" id="sticky_item">
-              <h2>Team</h2>
+              <h2>{t('about page.team.title')}</h2>
             </div>
             <div className="swiper4"
             >
               {
                 loadSwiper &&
                 <Swiper {...swiperOptions} id="content-carousel-container-unq-team" className="swiper-container">
-                  {
-                    data.map((item) => (
-                      <SwiperSlide key={item.id}>
+                      <SwiperSlide >
                         <div className="item">
                           <div className="img">
-                            <img src={item.image} alt="" />
+                            <img src={t('about page.team.data.one.image')} alt="" />
                           </div>
                           <div className="info">
                             <div className="main-marq team-position">
@@ -101,7 +101,7 @@ function Team() {
                                   {
                                     new Array(5).fill().map((_, i) => (
                                       <div className="item" key={i}>
-                                        <h4>{item.position}</h4>
+                                        <h4>{t('about page.team.data.one.position')}</h4>
                                       </div>
                                     ))
                                   }
@@ -110,7 +110,7 @@ function Team() {
                                   {
                                     new Array(5).fill().map((_, i) => (
                                       <div className="item" key={i}>
-                                        <h4>{item.position}</h4>
+                                        <h4>{t('about page.team.data.one.position')}</h4>
                                       </div>
                                     ))
                                   }
@@ -123,7 +123,7 @@ function Team() {
                                   {
                                     new Array(5).fill().map((_, i) => (
                                       <div className="item" key={i}>
-                                        <h4>{item.name}</h4>
+                                        <h4>{t('about page.team.data.one.name')}</h4>
                                       </div>
                                     ))
                                   }
@@ -132,7 +132,7 @@ function Team() {
                                   {
                                     new Array(5).fill().map((_, i) => (
                                       <div className="item" key={i}>
-                                        <h4>{item.name}</h4>
+                                        <h4>{t('about page.team.data.one.name')}</h4>
                                       </div>
                                     ))
                                   }
@@ -142,8 +142,219 @@ function Team() {
                           </div>
                         </div>
                       </SwiperSlide>
-                    ))
-                  }
+                      <SwiperSlide >
+                        <div className="item">
+                          <div className="img">
+                            <img src={t('about page.team.data.two.image')} alt="" />
+                          </div>
+                          <div className="info">
+                            <div className="main-marq team-position">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.two.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.two.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                            <div className="main-marq team-name">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.two.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.two.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide >
+                        <div className="item">
+                          <div className="img">
+                            <img src={t('about page.team.data.three.image')} alt="" />
+                          </div>
+                          <div className="info">
+                            <div className="main-marq team-position">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.three.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.three.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                            <div className="main-marq team-name">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.three.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.three.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide >
+                        <div className="item">
+                          <div className="img">
+                            <img src={t('about page.team.data.four.image')} alt="" />
+                          </div>
+                          <div className="info">
+                            <div className="main-marq team-position">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.four.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.four.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                            <div className="main-marq team-name">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.four.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.four.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide >
+                        <div className="item">
+                          <div className="img">
+                            <img src={t('about page.team.data.five.image')} alt="" />
+                          </div>
+                          <div className="info">
+                            <div className="main-marq team-position">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.five.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.five.position')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                            <div className="main-marq team-name">
+                              <div className="slide-har st1 non-strok">
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.five.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                                <div className="box">
+                                  {
+                                    new Array(5).fill().map((_, i) => (
+                                      <div className="item" key={i}>
+                                        <h4>{t('about page.team.data.five.name')}</h4>
+                                      </div>
+                                    ))
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+              
                 </Swiper>
               }
             </div>
