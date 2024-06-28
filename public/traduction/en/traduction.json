@@ -19,12 +19,13 @@
             },
             "shop" : {
                 "shop" :"shop" ,
-                "shop list" : "shop list" ,
+                "shop list" : "projects list" ,
                 "single product" : "single product" ,
                 "cart" : "cart" ,
                 "checkout" : "checkout" 
             },
-            "contact" : "contact"
+            "contact" : "contact",
+            "about" : "about"
         },
         "header" : {
             "title" :"busniss startup",

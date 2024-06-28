@@ -19,12 +19,13 @@
             },
             "shop": {
                 "shop": "boutique",
-                "shop list": "liste de la boutique",
+                "shop list": "list des projets",
                 "single product": "produit unique",
                 "cart": "panier",
                 "checkout": "paiement"
             },
-            "contact": "contact"
+            "contact": "contact",
+            "about" :"à propos"
         },
         "header": {
             "title": "startup d'affaires",

@@ -36,6 +36,7 @@ function Form() {
 
   const handleSubmit = async()=>{
     let res = await sendContactForm(values)
+    setState({values : initValues})
     if (res.status ===200){
       setAlert({
         open : true,
