@@ -36,7 +36,6 @@ export default function Login() {
     } else {
       // Redirect to the callback URL on successful login
       router.push(res.url);
-      router.reload()
     }
   };
   return (
