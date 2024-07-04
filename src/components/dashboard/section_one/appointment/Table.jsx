@@ -132,7 +132,9 @@ export default function Table() {
 
   /* this part for useEffect*/ 
   useEffect(()=>{
-    GET()
+    setTimeout(() => {
+        GET()
+    }, 100);
   },[])
   useEffect(()=>{
     if(searchTable.length === 0){
