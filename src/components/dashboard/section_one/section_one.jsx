@@ -42,8 +42,14 @@ export default function One({list,handleList}) {
   };
   
   useEffect(()=>{
+    préGET()
+  },[])
+  useEffect(()=>{
     GET()
   },[loading])
+  function préGET(){
+    setLoading(false)
+  }
   useEffect(() => {
     if (counts.count > 0) {
       setCounts(prev => ({
@@ -140,7 +146,7 @@ export default function One({list,handleList}) {
             
                     </div>
                     <Table/>
-                    {()=>setLoading(false)}
+                    
                 </>
             ) : (
                 <>
