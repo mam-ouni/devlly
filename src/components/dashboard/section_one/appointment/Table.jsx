@@ -133,7 +133,7 @@ export default function Table() {
   /* this part for useEffect*/ 
   useEffect(()=>{
      GET() 
-  },[])
+  },[count])
   useEffect(()=>{
     if(searchTable.length === 0){
         setAppointmentToDisplay(appointment.slice((page - 1) * Number(value), ((page - 1) * Number(value)) + Number(value)))
