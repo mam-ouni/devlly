@@ -65,7 +65,7 @@ export default function Table() {
      console.log(item);
      console.log(type);
      axios({
-        url : 'http://localhost:3000/api/sendEmail',
+        url : '/api/sendEmail',
         method : 'post',
         data : {type,gmail : item.email,date : formatDate(item.date) , time : item.time,name : item.name},
         withCredentials : true,
@@ -79,7 +79,7 @@ export default function Table() {
   const handleChange = (item,type)=>{ 
     console.log(item);
     axios({
-        url : 'http://localhost:3000/api/updateAppointment',
+        url : '/api/updateAppointment',
         method : 'post',
         data : {id : item.id_appointment,status : type},
         withCredentials : true,
