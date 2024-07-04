@@ -16,7 +16,7 @@ export default function One({list,handleList}) {
   })
   const GET = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/statistics', {
+      const response = await fetch('/api/statistics', {
         method: 'GET',
         credentials: 'include', // This is equivalent to axios' withCredentials: true
         cache : 'no-store'

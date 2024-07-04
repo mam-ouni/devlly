@@ -28,7 +28,7 @@ export default function Table() {
   }
   const GET = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/getAppointment', {
+      const response = await fetch('/api/getAppointment', {
         method: 'GET',
         credentials: 'include', // This is equivalent to axios' withCredentials: true
         headers: {
