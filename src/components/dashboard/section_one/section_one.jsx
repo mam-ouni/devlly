@@ -140,7 +140,7 @@ export default function One({list,handleList}) {
             
                     </div>
                     <Table/>
-                    {setLoading(false)}
+                    {()=>setLoading(false)}
                 </>
             ) : (
                 <>
