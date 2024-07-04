@@ -14,8 +14,9 @@ export default NextAuth({
         password: { label: 'Password', type: 'password', placeholder: 'Password' },
       },
       async authorize(credentials, req) {
+
         try {
-          const res = await fetch('http://localhost:3000/api/auth/login', {
+          const res = await fetch('https://devlly-devlly.vercel.app/api/auth/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
