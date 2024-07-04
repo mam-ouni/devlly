@@ -5,6 +5,7 @@ import Page from './CustomPagination'
 import axios from 'axios'
 import { Modal ,Box,Alert} from '@mui/material'
 export default function Table() {
+  const [loading,setLoading] = useState(true)
   const [appointment,setAppointment] = useState([])
   const [open,setOpen] = useState(false)
   const [appointment_modal,setAppointment_modal] = useState({})
@@ -132,8 +133,14 @@ export default function Table() {
 
   /* this part for useEffect*/ 
   useEffect(()=>{
-     GET() 
-  },[count])
+    préGET()
+  },[])
+  useEffect(()=>{
+    GET()
+  },[loading])
+  function préGET(){
+    setLoading(false)
+  }
   useEffect(()=>{
     if(searchTable.length === 0){
         setAppointmentToDisplay(appointment.slice((page - 1) * Number(value), ((page - 1) * Number(value)) + Number(value)))
