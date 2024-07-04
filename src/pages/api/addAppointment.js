@@ -1,36 +1,34 @@
-import mysql from 'mysql2/promise';
-import Connection from './db';
+import { sql } from '@vercel/postgres';
 
 export default async function addAppointment(req, res) {
-    let con;
     try {
-        // Establish the connection
-        con = await Connection();
-        await con.connect();
+        // Log the request body
         console.log(req.body);
-        const sql1 = "SELECT date, time FROM check_time WHERE date = ? AND time = ?";
-        const values1 = [req.body.date, req.body.time];
-        const [res1] = await con.execute(sql1, values1);
-        console.log(res1.length);
-        if (res1.length === 0) {
-            // If the time slot is not taken, proceed with adding the appointment
-            const sql2 = 'INSERT INTO appointment (name, email, subject, typeM,msg, number) VALUES (?, ?, ?,?, ?, ?)';
-            const values2 = [
-                req.body.name,
-                req.body.email,
-                req.body.subject,
-                req.body.type,
-                req.body.message,
-                req.body.number
-            ];
-            console.log(values2);
-            await con.execute(sql2, values2).then(res => console.log('insert successfuly!')).catch(err => console.log(err))
-            const [idResult] = await con.execute('SELECT MAX(id_appointment) as id FROM appointment');
-            const id = idResult[0].id;
 
-            const sql3 = 'INSERT INTO check_time (date, time, id_appointment) VALUES (?, ?, ?)';
-            const values3 = [req.body.date, req.body.time, id];
-            await con.execute(sql3, values3);
+        // Check if the time slot is taken
+        const res1 = await sql`
+            SELECT date, time 
+            FROM check_time 
+            WHERE date = ${req.body.date} AND time = ${req.body.time}
+        `;
+
+        console.log(res1.rowCount);
+        if (res1.rowCount === 0) {
+            // If the time slot is not taken, proceed with adding the appointment
+            const result2 = await sql`
+                INSERT INTO appointment (name, email, subject, typeM, msg, number) 
+                VALUES (${req.body.name}, ${req.body.email}, ${req.body.subject}, ${req.body.type}, ${req.body.message}, ${req.body.number}) 
+                RETURNING id_appointment
+            `;
+
+            console.log('Inserted successfully!');
+
+            const id = result2.rows[0].id_appointment;
+
+            await sql`
+                INSERT INTO check_time (date, time, id_appointment) 
+                VALUES (${req.body.date}, ${req.body.time}, ${id})
+            `;
 
             res.status(200).json({ message: 'Appointment added successfully!' });
         } else {
@@ -39,7 +37,5 @@ export default async function addAppointment(req, res) {
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: error.message });
-    } finally {
-        if (con) await con.end(); 
     }
 }
