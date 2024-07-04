@@ -42,8 +42,8 @@ export default function Table() {
       }
   
       const data = await response.json();
-  
-      setAppointment(data[0]);
+      console.log(data);
+      setAppointment(data.result);
       setAppointmentToDisplay(data[0].slice((page - 1) * value, (page - 1) * value + value));
     } catch (err) {
       console.error('Fetch error:', err);

@@ -1,16 +1,9 @@
-import Connection from "../db";
+import { sql } from "@vercel/postgres"
 export default async function login(req,res){
     try {
-        const con = await Connection()
-        await con.connect()
-        const query = 'select * from admin where email = ? and password = ?'
-        const values = [
-            req.body.email,
-            req.body.password,
-        ]
-        const result = await con.query(query,values)
-        if(result.length > 0){
-            res.status(200).json({message:"Login Successfull",data:result[0]})
+        const query = await sql`select * from admin where email = ${req.body.email} and password = ${req.body.password}`
+        if(query.rows.length > 0){
+            res.status(200).json({message:"Login Successfull",data:query.rows})
         }else{
             res.status(401).json({message:"Invalid Credentials"})
         }

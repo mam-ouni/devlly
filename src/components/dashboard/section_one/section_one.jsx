@@ -32,7 +32,7 @@ export default function One({list,handleList}) {
         ...prev,
         count: data.count,
         waitingCount: data.waitingCount,
-        confirmedCount: data.ConfirmedCount,
+        confirmedCount: data.confirmedCount,
         canceledCount: data.canceledCount,
       }));
     } catch (error) {
@@ -53,6 +53,9 @@ export default function One({list,handleList}) {
       }));
     }
   }, [counts.count]);
+  useEffect(()=>{
+    console.log(counts);
+  },[counts])
   return (
     <section className='dashboardone' style={{ height: '100vh', overflowY: 'auto' ,position:'relative'}}>
         {
