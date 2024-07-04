@@ -27,7 +27,7 @@ export default function Form({values,handleValues,handleValuesOne,handleValuesTw
              }, 4000);
           }else{
               axios({
-                url : 'http://localhost:3000/api/addAppointment',
+                url : '/api/addAppointment',
                 method : 'post',
                 data : values,
                 withCredentials : true,
@@ -68,7 +68,7 @@ export default function Form({values,handleValues,handleValuesOne,handleValuesTw
   const getTime = async () => {
       try {
         const res = await axios.post(
-          'http://localhost:3000/api/getTimes',
+          '/api/getTimes',
           { date: values.date },
           { withCredentials: true },
           
