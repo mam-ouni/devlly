@@ -5,6 +5,7 @@ import { colors } from '@/styles/colors'
 import Table from './appointment/Table'
 import axios from 'axios'
 export default function One({list,handleList}) {
+  const [loading,setLoading] = useState(true)
   const [counts,setCounts] = useState({
      count : 0,
      waitingCount : 0,
@@ -42,7 +43,7 @@ export default function One({list,handleList}) {
   
   useEffect(()=>{
     GET()
-  },[])
+  },[loading])
   useEffect(() => {
     if (counts.count > 0) {
       setCounts(prev => ({
@@ -139,6 +140,7 @@ export default function One({list,handleList}) {
             
                     </div>
                     <Table/>
+                    {setLoading(false)}
                 </>
             ) : (
                 <>
