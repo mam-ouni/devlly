@@ -44,7 +44,7 @@ export default function Table() {
   
       const data = await response.json();
       console.log(data);
-      setAppointment(data.result);
+      setAppointment(data.result.reverse());
       setAppointmentToDisplay(data[0].slice((page - 1) * value, (page - 1) * value + value));
     } catch (err) {
       console.error('Fetch error:', err);
@@ -290,7 +290,7 @@ export default function Table() {
                  <div className='d-flex align-items-center justify-content-between'>
                     <h6>Appointment {appointment_modal.id_appointment}</h6>
                     <button className='btn' onClick={()=>setOpen(false)}>
-                        <Close color={'black'} width={20} height={20}/>
+                        <Close color={'white'} width={20} height={20}/>
                     </button>
                  </div>
                  <div className='d-flex flex-column'>

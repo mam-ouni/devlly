@@ -11,7 +11,5 @@ export default async function login(req,res){
         console.log(error);
         res.json(500).json({error})
         throw error;
-    }finally{
-        if(con) await con.end()
     }
 }
